@@ -4,7 +4,7 @@ import { tokens } from "../theme";
 import { mockBarData as data } from "../data/mockData";
 
 // eslint-disable-next-line react/prop-types
-const BarChart = ({ isDashboard = false }) => {
+const BarChart = ({ isProDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -77,7 +77,7 @@ const BarChart = ({ isDashboard = false }) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: isDashboard ? undefined : "country", // changed
+        legend: isProDashboard ? undefined : "country", // changed
         legendPosition: "middle",
         legendOffset: 32,
       }}
@@ -85,7 +85,7 @@ const BarChart = ({ isDashboard = false }) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: isDashboard ? undefined : "food", // changed
+        legend: isProDashboard ? undefined : "food", // changed
         legendPosition: "middle",
         legendOffset: -40,
       }}

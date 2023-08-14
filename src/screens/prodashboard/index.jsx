@@ -23,7 +23,7 @@ import {
   Traffic as TrafficIcon,
 } from "@mui/icons-material";
 
-const Dashboard = () => {
+const ProDashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -147,7 +147,7 @@ const Dashboard = () => {
             </Box>
           </Box>
           <Box height="250px" m="-20px 0 0 0">
-            <LineChart isDashboard={true} />
+            <LineChart isProDashboard={true} />
           </Box>
         </Box>
         <Box
@@ -241,7 +241,7 @@ const Dashboard = () => {
             Sales Quantity
           </Typography>
           <Box height="250px" mt="-20px">
-            <BarChart isDashboard={true} />
+            <BarChart isProDashboard={true} />
           </Box>
         </Box>
         <Box
@@ -258,7 +258,7 @@ const Dashboard = () => {
             Geography Based Traffic
           </Typography>
           <Box height="200px">
-            <GeographyChart isDashboard={true} />
+            <GeographyChart isProDashboard={true} />
           </Box>
         </Box>
       </Box>
@@ -266,4 +266,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default ProDashboard;

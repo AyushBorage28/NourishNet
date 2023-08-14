@@ -4,7 +4,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./screens/globals/Topbar";
 
-import Dashboard from "./screens/dashboard";
+import ProDashboard from "./screens/prodashboard";
 import Team from "./screens/team";
 import Invoices from "./screens/invoices";
 import Contacts from "./screens/contacts";
@@ -12,7 +12,7 @@ import Bar from "./screens/bar";
 import Form from "./screens/forms";
 import Line from "./screens/line";
 import Pie from "./screens/pie";
-import Horeca from "./screens/horeca";
+
 import Geography from "./screens/geography";
 import Sidebar from "./screens/globals/Sidebar";
 
@@ -21,6 +21,7 @@ import Home from "./screens/Home";
 
 import Login from "./screens/Login";
 import SignUp from "./screens/SignUp";
+import Horeca from "./screens/Horeca";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -28,7 +29,7 @@ const App = () => {
 
   // const location = useLocation();
   const allowedRoutes = [
-    "/dashboard",
+    "/prodashboard",
     "/team",
     "/contacts",
     "/invoices",
@@ -62,7 +63,7 @@ const App = () => {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
 
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/prodashboard" element={<ProDashboard />} />
               <Route path="/team" element={<Team />} />
 
               <Route path="/contacts" element={<Contacts />} />
