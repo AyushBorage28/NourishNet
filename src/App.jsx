@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./screens/globals/Topbar";
@@ -12,7 +12,7 @@ import Bar from "./screens/bar";
 import Form from "./screens/forms";
 import Line from "./screens/line";
 import Pie from "./screens/pie";
-import FAQ from "./screens/faq";
+import Horeca from "./screens/Horeca";
 import Geography from "./screens/geography";
 import Sidebar from "./screens/globals/Sidebar";
 
@@ -25,7 +25,8 @@ import SignUp from "./screens/SignUp";
 const App = () => {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
-  const location = useLocation();
+
+  // const location = useLocation();
   const allowedRoutes = [
     "/dashboard",
     "/team",
@@ -44,6 +45,7 @@ const App = () => {
   );
 
   return (
+    <Router>
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
@@ -68,7 +70,7 @@ const App = () => {
               <Route path="/invoices" element={<Invoices />} />
 
               <Route path="/form" element={<Form />} />
-              <Route path="/faq" element={<FAQ />} />
+     <Route path="/faq" element={<Horeca/>} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
 
@@ -81,6 +83,7 @@ const App = () => {
         </div>
       </ThemeProvider>
     </ColorModeContext.Provider>
+    </Router>
   );
 };
 
