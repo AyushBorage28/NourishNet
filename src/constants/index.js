@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star } from "../assets"
+import {  facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox,  } from "../assets"
 
 import { FaChartLine } from 'react-icons/fa';
 import {IoMdPeople} from 'react-icons/io'

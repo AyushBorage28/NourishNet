@@ -2,25 +2,25 @@ import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
-import Topbar from "./scenes/globals/Topbar";
+import Topbar from "./screens/globals/Topbar";
 
-import Dashboard from "./scenes/dashboard";
-import Team from "./scenes/team";
-import Invoices from "./scenes/invoices";
-import Contacts from "./scenes/contacts";
-import Bar from "./scenes/bar";
-import Form from "./scenes/forms";
-import Line from "./scenes/line";
-import Pie from "./scenes/pie";
-import FAQ from "./scenes/faq";
-import Geography from "./scenes/geography";
-import Sidebar from "./scenes/globals/Sidebar";
+import Dashboard from "./screens/dashboard";
+import Team from "./screens/team";
+import Invoices from "./screens/invoices";
+import Contacts from "./screens/contacts";
+import Bar from "./screens/bar";
+import Form from "./screens/forms";
+import Line from "./screens/line";
+import Pie from "./screens/pie";
+import FAQ from "./screens/faq";
+import Geography from "./screens/geography";
+import Sidebar from "./screens/globals/Sidebar";
 
-import Calendar from "./scenes/calendar";
+import Calendar from "./screens/calendar";
+import Home from "./screens/Home";
 
-import HomeScreen from "./scenes/HomeScreen";
-import Login from "./scenes/Login";
-import Signup from "./scenes/Signup";
+import Login from "./screens/Login";
+import SignUp from "./screens/SignUp";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -56,9 +56,9 @@ const App = () => {
             )}
 
             <Routes>
-              <Route path="/" element={<HomeScreen />} />
+              <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
+              <Route path="/signup" element={<SignUp />} />
 
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
