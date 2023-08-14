@@ -12,7 +12,7 @@ import Bar from "./screens/bar";
 import Form from "./screens/forms";
 import Line from "./screens/line";
 import Pie from "./screens/pie";
-import Horeca from "./screens/Horeca";
+import Horeca from "./screens/horeca";
 import Geography from "./screens/geography";
 import Sidebar from "./screens/globals/Sidebar";
 
@@ -33,7 +33,7 @@ const App = () => {
     "/contacts",
     "/invoices",
     "/form",
-    "/faq",
+    "/horeca",
     "/bar",
     "/pie",
     "/line",
@@ -70,7 +70,7 @@ const App = () => {
               <Route path="/invoices" element={<Invoices />} />
 
               <Route path="/form" element={<Form />} />
-     <Route path="/faq" element={<Horeca/>} />
+     <Route path="/horeca" element={<Horeca/>} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
 

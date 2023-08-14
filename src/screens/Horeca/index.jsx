@@ -37,9 +37,7 @@ const StyledRestaurantName = styled(Typography)`
   margin-bottom: 8px; /* Adding spacing in Y direction for the restaurant name */
 `;
 
-const StyledAddress = styled(Typography)`
-  margin-top: 6px; /* Adding spacing in Y direction for the address */
-`;
+
 
 const Horeca = () => {
   const horecaData = [
