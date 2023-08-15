@@ -1,7 +1,15 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Akshayapatra, Marriott, Raddison, Taj, Unicef, WWF, Partnership } from "../assets";
+import {
+  Akshayapatra,
+  Marriott,
+  Raddison,
+  Taj,
+  Unicef,
+  WWF,
+  Partnership,
+} from "../assets";
 
 const Stats = () => {
   const partnerVariants = {
@@ -14,46 +22,50 @@ const Stats = () => {
   };
 
   return (
-    <section className="bg-whitw dark:bg-gray-900 py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-      <div className="text-left">
-        <div className="mb-8">
-          <h2 className="text-3xl font-extrabold tracking-tight leading-tight text-gray-900 lg:mb-4 dark:text-white md:text-4xl">
-            Our Impactful Partnerships{" "}
-            <img src={Partnership} alt="Partnership" className="h-20 sm:h-16" />
-          </h2>
-          <p className="mb-6 text-gray-600 dark:text-gray-400">
-            Together with our partners, we are reducing food waste and making a positive difference in the world.
-          </p>
+    <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 className="text-3xl font-extrabold text-center tracking-tight leading-tight text-gray-900 lg:mb-4 dark:text-white md:text-4xl">
+          Our Impactful Partnerships
+        </h2>
+        <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+          <img
+            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            src={Akshayapatra}
+            alt="Transistor"
+            width={158}
+            height={48}
+          />
+          <img
+            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            src={Unicef}
+            alt="Reform"
+            width={158}
+            height={48}
+          />
+          <img
+            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            src={Marriott}
+            alt="Tuple"
+            width={158}
+            height={48}
+          />
+          <img
+            className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+            src={Taj}
+            alt="SavvyCal"
+            width={158}
+            height={48}
+          />
+          <img
+            className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+            src={Raddison}
+            alt="Statamic"
+            width={158}
+            height={48}
+          />
         </div>
-        <div className="grid grid-cols-2 gap-4 md:gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
-          {[Akshayapatra, Marriott, Raddison, Taj, Unicef, WWF].map((logo, index) => (
-            <motion.a
-              key={index}
-              href="#"
-              className="flex justify-center items-center"
-              variants={partnerVariants}
-              initial="hidden"
-              animate="visible"
-              whileHover="hover"
-            >
-              <motion.img src={logo} alt={`Partner ${index}`} variants={hoverVariants} className="h-12 sm:h-16" />
-            </motion.a>
-          ))}
-        </div>
-        <div className="py-8 max-w-screen-xl lg:py-16">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">How We Collaborate</h3>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
-            We connect the hospitality industry (HORECA) with NGOs to ensure surplus food reaches those in need. Through these partnerships, we are not only preventing food wastage but also contributing to social and environmental sustainability.
-          </p>
-        </div>
-        <a
-          href="/signup"
-          className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-[#EDA277] rounded-lg hover:bg-[#DE7E44] transition-colors"
-        >
-          Join us <FaArrowRight className="ml-2" />
-        </a>
       </div>
-    </section>
+    </div>
   );
 };
 
