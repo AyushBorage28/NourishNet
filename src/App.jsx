@@ -34,6 +34,7 @@ const App = () => {
     "/team",
     "/contacts",
     "/invoices",
+    "/premium",
     "/form",
     "/horeca",
     "/bar",
