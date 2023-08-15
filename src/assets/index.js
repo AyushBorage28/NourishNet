@@ -15,8 +15,10 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.jpeg";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
+import demoRestaurant from "./demoRestaurant.jpeg";
 
 export {
+  demoRestaurant,
   card,
   dropbox,
   quotes,

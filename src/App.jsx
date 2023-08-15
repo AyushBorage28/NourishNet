@@ -5,6 +5,7 @@ import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./screens/globals/Topbar";
 
 import ProDashboard from "./screens/prodashboard";
+import Dashboard from "./screens/dashboard";
 import Team from "./screens/team";
 import Invoices from "./screens/invoices";
 import Contacts from "./screens/contacts";
@@ -30,11 +31,13 @@ const App = () => {
   const location = useLocation();
   const allowedRoutes = [
     "/prodashboard",
+    "/dashboard",
     "/team",
     "/contacts",
     "/invoices",
     "/premium",
     "/form",
+    "/addhoreca",
     "/horeca",
     "/bar",
     "/pie",
@@ -64,6 +67,7 @@ const App = () => {
               <Route path="/signup" element={<SignUp />} />
               <Route path="/premium" element={<PremiumFeatures />} />
               <Route path="/prodashboard" element={<ProDashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
 
               <Route path="/contacts" element={<Contacts />} />
