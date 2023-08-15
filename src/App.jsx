@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./screens/globals/Topbar";
@@ -28,7 +28,7 @@ const App = () => {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
 
-  // const location = useLocation();
+  const location = useLocation();
   const allowedRoutes = [
     "/prodashboard",
     "/team",
@@ -48,7 +48,6 @@ const App = () => {
   );
 
   return (
-    <Router>
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
@@ -73,7 +72,7 @@ const App = () => {
               <Route path="/invoices" element={<Invoices />} />
 
               <Route path="/addhoreca" element={<AddHoreca />} />
-     <Route path="/horeca" element={<Horeca/>} />
+              <Route path="/horeca" element={<Horeca />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
 
@@ -86,7 +85,6 @@ const App = () => {
         </div>
       </ThemeProvider>
     </ColorModeContext.Provider>
-    </Router>
   );
 };
 
