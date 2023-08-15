@@ -22,11 +22,11 @@ const Home = () => {
       <Features />
       <ImageSection />
       <Trial />
-      <Footer />
+    
       </div>
     
       </div>
-      
+      <Footer />
     </>
   );
 };
