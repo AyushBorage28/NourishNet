@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaGem } from 'react-icons/fa';
+import { FaGem } from "react-icons/fa";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -18,6 +18,8 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { people01 } from "../../assets";
+import { FoodBankOutlined, MessageOutlined, NotificationAddOutlined, RestaurantOutlined } from "@mui/icons-material";
+import FastfoodOutlinedIcon from '@mui/icons-material/FastfoodOutlined';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -45,26 +47,26 @@ const Sidebar = () => {
 
   return (
     <Box
-    sx={{
-      "& .pro-sidebar-inner": {
-        background: `${colors.primary[400]} !important`,
-      },
-      "& .pro-icon-wrapper": {
-        backgroundColor: "transparent !important",
-      },
-      "& .pro-inner-item": {
-        padding: "5px 35px 5px 20px !important",
-        display: "flex !important ",  
-        alignItems: "center !important", 
-      },
-      "& .pro-inner-item:hover": {
-        color: "#5aaedb !important",  // Change the color on hover
-      },
-      "& .pro-menu-item.active": {
-        color: "#007cc2 !important",
-      },
-    }}
-  >
+      sx={{
+        "& .pro-sidebar-inner": {
+          background: `${colors.primary[400]} !important`,
+        },
+        "& .pro-icon-wrapper": {
+          backgroundColor: "transparent !important",
+        },
+        "& .pro-inner-item": {
+          padding: "5px 35px 5px 20px !important",
+          display: "flex !important ",
+          alignItems: "center !important",
+        },
+        "& .pro-inner-item:hover": {
+          color: "#5aaedb !important", // Change the color on hover
+        },
+        "& .pro-menu-item.active": {
+          color: "#007cc2 !important",
+        },
+      }}
+    >
       <ProSidebar collapsed={isCollapsed}>
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
@@ -137,9 +139,9 @@ const Sidebar = () => {
               Data
             </Typography>
             <Item
-              title="Manage Team"
+              title="Manage Food"
               to="/team"
-              icon={<PeopleOutlinedIcon />}
+              icon={<FastfoodOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -151,9 +153,9 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Invoices Balances"
+              title="Notifications"
               to="/invoices"
-              icon={<ReceiptOutlinedIcon />}
+              icon={<NotificationAddOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -166,9 +168,16 @@ const Sidebar = () => {
               Pages
             </Typography>
             <Item
+              title="All Restaurants"
+              to="/listHoreca"
+              icon={<RestaurantOutlined />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
               title="Chat"
-              to="/addhoreca"
-              icon={<PersonOutlinedIcon />}
+              to="/chat"
+              icon={<MessageOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -176,13 +185,6 @@ const Sidebar = () => {
               title="Calendar"
               to="/calendar"
               icon={<CalendarTodayOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="All Restaraunts"
-              to="/horeca"
-              icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />

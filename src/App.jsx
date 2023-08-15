@@ -38,7 +38,7 @@ const App = () => {
     "/premium",
     "/form",
     "/addhoreca",
-    "/horeca",
+    "/listHoreca",
     "/bar",
     "/pie",
     "/line",
@@ -75,7 +75,7 @@ const App = () => {
               <Route path="/invoices" element={<Invoices />} />
 
               <Route path="/addhoreca" element={<AddHoreca />} />
-              <Route path="/horeca" element={<Horeca />} />
+              <Route path="/listHoreca" element={<Horeca />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
 
