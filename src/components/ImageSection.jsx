@@ -1,30 +1,40 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { HoReCa, NGO } from "../assets";
 
 const ImageSection = () => {
-  const variants = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 },
+  const [sectionRef, sectionInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2, // Adjust this threshold as needed
+  });
+
+  const sectionVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.5, // Increased duration for more noticeable motion
+        ease: "easeOut",
+      },
+    },
   };
 
-  const transition = {
-    ease: "easeOut",
-    duration: 1.2, // Increase duration for smoother transition
-    delay: 0.5, // Add a delay for a staggered effect
-  };
   return (
-    <motion.section
-      className="bg-white dark:bg-gray-900"
-      initial="hidden"
-      animate="visible"
-      variants={variants}
-      transition={transition}
-    >
-      <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+    <section className="bg-white dark:bg-gray-900">
+      <div
+        ref={sectionRef}
+        className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+      >
         <motion.div
+          initial="hidden"
+          animate={sectionInView ? "visible" : "hidden"}
+          variants={sectionVariants}
           className="font-light text-gray-500 sm:text-lg dark:text-gray-400"
-          variants={variants}
         >
           <h2 className="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">
             Transforming Excess into Blessings in Real Time
@@ -41,36 +51,28 @@ const ImageSection = () => {
           </p>
         </motion.div>
         <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={sectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 1.5, ease: "easeOut" }} // Increased duration here as well
           className="grid grid-cols-2 gap-4 mt-8"
-          variants={variants}
         >
-          <motion.div
-            className="relative h-96 overflow-hidden rounded-lg"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ ease: "easeOut", duration: 0.8, delay: 0.2 }}
-          >
+          <div className="relative h-96 overflow-hidden rounded-lg">
             <img
               className="absolute inset-0 w-full h-full object-cover"
               src={NGO}
               alt="office content 2"
             />
-          </motion.div>
-          <motion.div
-            className="relative h-96 overflow-hidden rounded-lg  mt-4 lg:mt-10"
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ ease: "easeOut", duration: 0.8, delay: 0.2 }}
-          >
+          </div>
+          <div className="relative h-96 overflow-hidden rounded-lg mt-4 lg:mt-10">
             <img
               className="absolute inset-0 w-full h-full object-cover"
               src={HoReCa}
               alt="office content 1"
             />
-          </motion.div>
+          </div>
         </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
