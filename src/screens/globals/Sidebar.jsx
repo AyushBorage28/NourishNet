@@ -140,7 +140,7 @@ const Sidebar = () => {
             </Typography>
             <Item
               title="Manage Food"
-              to="/team"
+              to="/eateryform"
               icon={<FastfoodOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
