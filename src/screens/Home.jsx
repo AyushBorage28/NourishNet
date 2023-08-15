@@ -6,19 +6,32 @@ import Features from "../components/Features";
 import ImageSection from "../components/ImageSection";
 import Trial from "../components/Trial";
 import Footer from "../components/Footer";
-import AboutUs from "../components/Aboutus";
 
 const Home = () => {
   return (
     <>
+
+<div className="sm:px-16 px-6 flex justify-center items-center">
+      <div className="xl:max-w-[1280px] w-full">
       <Navbar />
+      </div>
+      </div>
+      <div className="flex justify-center items-start">
+      <div className="xl:max-w-[1280px] w-full">
       <Hero />
-      <AboutUs/>
-      {/* <Stats /> */}
+      </div>
+    </div>
+    <div className="sm:px-16 px-6 flex justify-center items-center ">
+      <div className="xl:max-w-[1280px] w-full">
+      <Stats />
       <Features />
       <ImageSection />
       <Trial />
       <Footer />
+      </div>
+    
+      </div>
+      
     </>
   );
 };

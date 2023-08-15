@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import { heroImage } from "../assets";
 import { FaArrowRight, FaPhoneAlt } from "react-icons/fa";
@@ -53,7 +53,7 @@ const Hero = () => {
           variants={textVariants}
         >
           <h1 className="text-4xl font-extrabold leading-tight md:text-5xl xl:text-6xl text-gray-800 dark:text-white">
-            Transforming Excess into Equity
+          From Excess to Equity
           </h1>
           <h3 className="mt-4 text-xl font-semibold text-gray-600 dark:text-gray-300">
             Nourishing a Better Tomorrow

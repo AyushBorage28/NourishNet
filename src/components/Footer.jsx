@@ -1,17 +1,23 @@
-import React from "react";
+import { motion } from "framer-motion";
+
 import { logo } from "../assets";
 
 const Footer = () => {
   return (
-    <footer className="p-4 bg-gray-50 sm:p-6 dark:bg-gray-800">
+    <motion.footer className="p-4 bg-gray-50 sm:p-6 dark:bg-gray-800"
+     initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+    
+    >
       <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center">
               <img
                 src={logo}
-                className="mr-3 h-16"
-                alt="FlowBite Logo"
+                className="mr-3 h-32"
+                alt="Orion Logo"
               />
               {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 Flowbite
@@ -175,7 +181,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
