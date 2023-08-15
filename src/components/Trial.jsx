@@ -7,9 +7,8 @@ const Trial = () => {
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
             <h2 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
-              Powering innovation at{" "}
-              <span className="font-extrabold">200,000+</span> companies
-              worldwide
+            Fueling Change Across Countless Meals: Empowering{" "}
+              <span className="font-extrabold">HoReCa and NGOs</span> Globally
             </h2>
             <p className="mb-4 font-light">
               Track work across the enterprise through an open, collaborative
@@ -25,7 +24,7 @@ const Trial = () => {
             </p>
             <a
               href="#"
-              className="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700"
+              className="inline-flex items-center font-medium text-[#eda277] hover:text-[#de7e44] dark:text-primary-500 dark:hover:text-primary-700"
             >
               Learn more
               <svg
@@ -49,7 +48,7 @@ const Trial = () => {
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-sm text-center">
             <h2 className="mb-4 text-4xl font-extrabold leading-tight text-gray-900 dark:text-white">
-              Start your free trial today
+              Join our platform today
             </h2>
             <p className="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">
               Try Flowbite Platform for 30 days. No credit card required.

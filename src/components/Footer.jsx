@@ -1,4 +1,5 @@
 import React from "react";
+import { logo } from "../assets";
 
 const Footer = () => {
   return (
@@ -8,13 +9,13 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center">
               <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                className="mr-3 h-8"
+                src={logo}
+                className="mr-3 h-16"
                 alt="FlowBite Logo"
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 Flowbite
-              </span>
+              </span> */}
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
