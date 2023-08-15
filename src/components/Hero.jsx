@@ -22,6 +22,24 @@ const Hero = () => {
   };
 
 
+  const location = async () => {
+    const successCallback = (position) => {
+      console.log("Latitude:", position.coords.latitude);
+      console.log("Longitude:", position.coords.longitude);
+    };
+
+    const errorCallback = (error) => {
+      console.log("Error getting location:", error);
+    };
+
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    } else {
+      console.log("Geolocation is not available.");
+    }
+  };
+
+  location();
   return (
     <motion.section
       className="bg-white dark:bg-gray-900"
