@@ -2,6 +2,24 @@ import React from "react";
 import { heroImage } from "../assets";
 
 const Hero = () => {
+  const location = async () => {
+    const successCallback = (position) => {
+      console.log("Latitude:", position.coords.latitude);
+      console.log("Longitude:", position.coords.longitude);
+    };
+
+    const errorCallback = (error) => {
+      console.log("Error getting location:", error);
+    };
+
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    } else {
+      console.log("Geolocation is not available.");
+    }
+  };
+
+  location();
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
