@@ -17,7 +17,6 @@ import Geography from "./screens/geography";
 import Sidebar from "./screens/globals/Sidebar";
 
 import Calendar from "./screens/calendar";
-import Home from "./screens/Home";
 
 import Login from "./screens/Login";
 import SignUp from "./screens/SignUp";
@@ -60,7 +59,7 @@ const App = () => {
             )}
 
             <Routes>
-              <Route path="/" element={<Home />} />
+              {/* <Route path="/" element={<Home />} /> */}
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/premium" element={<PremiumFeatures />} />
