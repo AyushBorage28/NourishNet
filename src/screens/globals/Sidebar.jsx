@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaGem } from 'react-icons/fa';
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -44,24 +45,26 @@ const Sidebar = () => {
 
   return (
     <Box
-      sx={{
-        "& .pro-sidebar-inner": {
-          background: `${colors.primary[400]} !important`,
-        },
-        "& .pro-icon-wrapper": {
-          backgroundColor: "transparent !important",
-        },
-        "& .pro-inner-item": {
-          padding: "5px 35px 5px 20px !important",
-        },
-        "& .pro-inner-item:hover": {
-          color: "#5aaedb !important",
-        },
-        "& .pro-menu-item.active": {
-          color: "#007cc2 !important",
-        },
-      }}
-    >
+    sx={{
+      "& .pro-sidebar-inner": {
+        background: `${colors.primary[400]} !important`,
+      },
+      "& .pro-icon-wrapper": {
+        backgroundColor: "transparent !important",
+      },
+      "& .pro-inner-item": {
+        padding: "5px 35px 5px 20px !important",
+        display: "flex !important ",  
+        alignItems: "center !important", 
+      },
+      "& .pro-inner-item:hover": {
+        color: "#5aaedb !important",  // Change the color on hover
+      },
+      "& .pro-menu-item.active": {
+        color: "#007cc2 !important",
+      },
+    }}
+  >
       <ProSidebar collapsed={isCollapsed}>
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
@@ -119,9 +122,9 @@ const Sidebar = () => {
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
-              title="ProDashboard"
+              title="Premium"
               to="/prodashboard"
-              icon={<HomeOutlinedIcon />}
+              icon={<FaGem />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -164,7 +167,7 @@ const Sidebar = () => {
             </Typography>
             <Item
               title="Profile Form"
-              to="/form"
+              to="/addhoreca"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

@@ -9,7 +9,7 @@ import Team from "./screens/team";
 import Invoices from "./screens/invoices";
 import Contacts from "./screens/contacts";
 import Bar from "./screens/bar";
-import Form from "./screens/forms";
+import AddHoreca from "./screens/addhoreca";
 import Line from "./screens/line";
 import Pie from "./screens/pie";
 
@@ -22,6 +22,7 @@ import Home from "./screens/Home";
 import Login from "./screens/Login";
 import SignUp from "./screens/SignUp";
 import Horeca from "./screens/Horeca";
+import PremiumFeatures from "./screens/premium";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -62,7 +63,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
-
+              <Route path="/premium" element={<PremiumFeatures />} />
               <Route path="/prodashboard" element={<ProDashboard />} />
               <Route path="/team" element={<Team />} />
 
@@ -70,7 +71,7 @@ const App = () => {
 
               <Route path="/invoices" element={<Invoices />} />
 
-              <Route path="/form" element={<Form />} />
+              <Route path="/addhoreca" element={<AddHoreca />} />
      <Route path="/horeca" element={<Horeca/>} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
