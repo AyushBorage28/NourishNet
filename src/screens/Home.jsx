@@ -10,10 +10,7 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
-
-
       <Navbar />
-    
       <div className="flex justify-center items-start">
       <div className="xl:max-w-[1280px] w-full">
       <Hero />

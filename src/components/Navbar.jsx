@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="bg-white border-b-2 border-gray-300 p-2 shadow-md"
+      className="bg-white border-b-2  border-gray-300 p-2 "
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}

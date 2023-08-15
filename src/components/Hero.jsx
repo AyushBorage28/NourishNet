@@ -65,7 +65,7 @@ const Hero = () => {
           </p>
           <div className="mt-8 space-x-4">
             <a
-              href="/signup"
+              href="/joinUs"
               className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-[#EDA277] rounded-lg hover:bg-[#DE7E44] transition-colors"
             >
               Join us <FaArrowRight className="ml-2" />
