@@ -2,7 +2,7 @@ import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { FaPhone, FaMapMarkerAlt, FaMapMarkedAlt } from "react-icons/fa"; // Import the icons
 import Header from "../../components/Header";
 import styled from "styled-components"; // Import styled-components
-import { demoRestaurant, ngo1, ngo2 } from "../../assets";
+import { ngo1 } from "../../assets";
 
 const StyledCard = styled(Card)`
   width: 275px;
