@@ -1,5 +1,11 @@
 import { useState } from "react";
+
 import { Routes, Route, useLocation } from "react-router-dom";
+import Home from "./screens/Home";
+import Login from "./screens/Login";
+import "./App.css"
+import JoinUs from "./screens/JoinUs";
+
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./screens/globals/Topbar";
@@ -19,12 +25,13 @@ import Sidebar from "./screens/globals/Sidebar";
 
 import Calendar from "./screens/calendar";
 
-import Login from "./screens/Login";
-import SignUp from "./screens/SignUp";
+
 import Horeca from "./screens/Horeca";
 import PremiumFeatures from "./screens/premium";
 import EateryForm from "./screens/eateryform";
 import ListFood from "./listfood";
+import SignUp from "./screens/SignUp";
+
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -68,9 +75,12 @@ const App = () => {
             )}
 
             <Routes>
-              {/* <Route path="/" element={<Home />} /> */}
+              <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/joinUs" element={<JoinUs />} />
               <Route path="/signup" element={<SignUp />} />
+              <Route path="/signup/:type" element={<SignUp />} />
+
               <Route path="/premium" element={<PremiumFeatures />} />
               <Route path="/eateryform" element={<EateryForm />} />
               <Route path="/prodashboard" element={<ProDashboard />} />

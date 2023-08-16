@@ -3,11 +3,18 @@ import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
+
 import { useTheme } from "@mui/material";
+
+import CameraAltIcon from "@mui/icons-material/CameraAlt"; // Import the camera icon
+import HOST from "../../utils/Host.js";
+import axios from "axios";
+
 
 const ListFood = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
@@ -51,6 +58,14 @@ const ListFood = () => {
       flex: 1,
     },
   ];
+
+  const handleFormSubmit = (values) => {
+    console.log(values);
+    axios.put(`${HOST}/api/users/profile`, values).then((res) => {
+      console.log(res);
+    });
+  };
+
 
   return (
     <Box m="20px">
