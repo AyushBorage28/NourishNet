@@ -51,15 +51,15 @@ const Hero = () => {
           variants={textVariants}
         >
           <h1 className="text-4xl font-extrabold leading-tight md:text-5xl xl:text-6xl text-gray-800 dark:text-white">
-            From Excess to Equity
+          From Excess to Equity
           </h1>
           <h3 className="mt-4 text-xl font-semibold text-gray-600 dark:text-gray-300">
             Nourishing a Better Tomorrow
           </h3>
           <p className="mt-6 text-lg text-gray-600 dark:text-gray-400">
             Bridging the HoReCa Industry and NGOs for Instant Food Rescue and
-            Community Nourishment. Join us and transform food waste into hopeful
-            meals with NourishNet.
+            Community Nourishment. Join us and transform food waste into
+            hopeful meals with NourishNet.
           </p>
           <div className="mt-8 space-x-4">
             <a
