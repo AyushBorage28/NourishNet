@@ -1,6 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./screens/Home";
 import Login from "./screens/Login";
@@ -8,20 +7,6 @@ import "./App.css"
 import SignUp from "./screens/Signup";
 import JoinUs from "./screens/JoinUs";
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/joinUs" element={<JoinUs />} />
-    </Routes>
-  );
-}
-
-import { Routes, Route, useLocation } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./screens/globals/Topbar";
@@ -41,14 +26,10 @@ import Sidebar from "./screens/globals/Sidebar";
 
 import Calendar from "./screens/calendar";
 
-import Login from "./screens/Login";
 
 import Horeca from "./screens/Horeca";
 import PremiumFeatures from "./screens/premium";
 import EateryForm from "./screens/eateryform";
-import Home from "./screens/Home";
-import JoinUs from "./screens/JoinUs";
-import SignUp from "./screens/SignUp";
 
 const App = () => {
   const [theme, colorMode] = useMode();
