@@ -11,6 +11,7 @@ import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./screens/globals/Topbar";
 
 import ProDashboard from "./screens/prodashboard";
+import NgoDashboard from "./screens/NgoDashboard";
 import Dashboard from "./screens/dashboard";
 import Team from "./screens/team";
 import Invoices from "./screens/invoices";
@@ -41,6 +42,7 @@ const App = () => {
   const allowedRoutes = [
     "/prodashboard",
     "/dashboard",
+    "/ngodashboard",
     "/team",
     "/eateryform",
     "/contacts",
@@ -82,6 +84,7 @@ const App = () => {
               <Route path="/signup/:type" element={<SignUp />} />
 
               <Route path="/premium" element={<PremiumFeatures />} />
+              <Route path="/ngodashboard" element={<NgoDashboard />} />
               <Route path="/eateryform" element={<EateryForm />} />
               <Route path="/prodashboard" element={<ProDashboard />} />
               <Route path="/listfood" element={<ListFood/>} />

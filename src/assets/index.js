@@ -16,6 +16,7 @@ import people01 from "./people01.jpeg";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
 import demoRestaurant from "./demoRestaurant.jpeg";
+import JoinUsImage from "./JoinUsImage.png";
 
 import logo from "./logo.png"
 import heroImage from "./heroImage.png"
@@ -47,6 +48,7 @@ export {
   discount,
   twitter,
   people01,
+  JoinUsImage,
   people02,
   people03,
   logo, heroImage, HoReCa,
