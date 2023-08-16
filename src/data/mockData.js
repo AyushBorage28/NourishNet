@@ -372,53 +372,42 @@ export const mockDataInvoices = [
 
 export const mockTransactions = [
   {
-    txId: "01e4dsa",
-    user: "johndoe",
-    date: "2021-09-01",
-    cost: "43.95",
+    txId: "65d4dsa",
+    user: "AkshayaPatra",
+    date: "2023-08-05",
+    cost: "20 kg",
   },
   {
-    txId: "0315dsaa",
-    user: "jackdower",
-    date: "2022-04-01",
-    cost: "133.45",
+    txId: "034daa",
+    user: "TheDoGooders",
+    date: "2023-08-11",
+    cost: "13 kg",
   },
   {
-    txId: "01e4dsa",
-    user: "aberdohnny",
-    date: "2021-09-01",
-    cost: "43.95",
+    txId: "01e34a",
+    user: "AnnaMitra",
+    date: "2023-08-16",
+    cost: "05 kg",
   },
   {
-    txId: "51034szv",
-    user: "goodmanave",
-    date: "2022-11-05",
-    cost: "200.95",
+    txId: "514fszv",
+    user: "No Hungry Child",
+    date: "2023-08-20",
+    cost: "02 kg",
   },
   {
     txId: "0a123sb",
-    user: "stevebower",
-    date: "2022-11-02",
-    cost: "13.55",
+    user: "RotiBank",
+    date: "2023-08-25",
+    cost: "19 kg",
   },
   {
-    txId: "01e4dsa",
-    user: "aberdohnny",
-    date: "2021-09-01",
-    cost: "43.95",
+    txId: "013gdsa",
+    user: "RobinHoodArmy",
+    date: "2023-08-31",
+    cost: "43 kg",
   },
-  {
-    txId: "120s51a",
-    user: "wootzifer",
-    date: "2019-04-15",
-    cost: "24.20",
-  },
-  {
-    txId: "0315dsaa",
-    user: "jackdower",
-    date: "2022-04-01",
-    cost: "133.45",
-  },
+
 ];
 
 export const mockBarData = [
@@ -536,165 +525,107 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "japan",
+    id: "3rd week",
     color: tokens("dark").greenAccent[500],
     data: [
       {
-        x: "plane",
+        x: "Mon",
         y: 101,
       },
       {
-        x: "helicopter",
+        x: "Tues",
         y: 75,
       },
       {
-        x: "boat",
+        x: "Wed",
         y: 36,
       },
       {
-        x: "train",
+        x: "Thurs",
         y: 216,
       },
       {
-        x: "subway",
+        x: "Fri",
         y: 35,
       },
       {
-        x: "bus",
+        x: "Sat",
         y: 236,
       },
       {
-        x: "car",
-        y: 88,
+        x: "Sun",
+        y: 121,
       },
-      {
-        x: "moto",
-        y: 232,
-      },
-      {
-        x: "bicycle",
-        y: 281,
-      },
-      {
-        x: "horse",
-        y: 1,
-      },
-      {
-        x: "skateboard",
-        y: 35,
-      },
-      {
-        x: "others",
-        y: 14,
-      },
+
     ],
   },
   {
-    id: "france",
+    id: "2nd week",
     color: tokens("dark").blueAccent[300],
     data: [
       {
-        x: "plane",
+        x: "Mon",
         y: 212,
       },
       {
-        x: "helicopter",
+        x: "Tues",
         y: 190,
       },
       {
-        x: "boat",
+        x: "Wed",
         y: 270,
       },
       {
-        x: "train",
+        x: "Thurs",
         y: 9,
       },
       {
-        x: "subway",
+        x: "Fri",
         y: 75,
       },
       {
-        x: "bus",
+        x: "Sat",
         y: 175,
       },
       {
-        x: "car",
+        x: "Sun",
         y: 33,
       },
-      {
-        x: "moto",
-        y: 189,
-      },
-      {
-        x: "bicycle",
-        y: 97,
-      },
-      {
-        x: "horse",
-        y: 87,
-      },
-      {
-        x: "skateboard",
-        y: 299,
-      },
-      {
-        x: "others",
-        y: 251,
-      },
+
     ],
   },
   {
-    id: "us",
+    id: "1st week",
     color: tokens("dark").redAccent[200],
     data: [
       {
-        x: "plane",
+        x: "Mon",
         y: 191,
       },
       {
-        x: "helicopter",
+        x: "Tues",
         y: 136,
       },
       {
-        x: "boat",
+        x: "Wed",
         y: 91,
       },
       {
-        x: "train",
+        x: "Thurs",
         y: 190,
       },
       {
-        x: "subway",
+        x: "Fri",
         y: 211,
       },
       {
-        x: "bus",
+        x: "Sat",
         y: 152,
+      }, {
+        x: "Sun",
+        y: 120,
       },
-      {
-        x: "car",
-        y: 189,
-      },
-      {
-        x: "moto",
-        y: 152,
-      },
-      {
-        x: "bicycle",
-        y: 8,
-      },
-      {
-        x: "horse",
-        y: 197,
-      },
-      {
-        x: "skateboard",
-        y: 107,
-      },
-      {
-        x: "others",
-        y: 170,
-      },
+
     ],
   },
 ];

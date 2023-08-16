@@ -160,7 +160,7 @@ export const footerLinks = [
 
 export const stats = [
   {
-    "title": "125 tonnes",
+    "title": "625 kgs",
     "subtitle": "Food Saved",
     "progress": "0.75",
     "increase": "+14%",
@@ -181,8 +181,8 @@ export const stats = [
     "icon": "PersonAddIcon"
   },
   {
-    "title": "1,325,134",
-    "subtitle": "Traffic Received",
+    "title": "1,325 kg",
+    "subtitle": "Fertilizer Produced",
     "progress": "0.80",
     "increase": "+43%",
     "icon": "TrafficIcon"
@@ -190,15 +190,15 @@ export const stats = [
 ]
 
 export const revenueGenerated = {
-  title: "Revenue Generated",
-  amount: "$59,342.32",
+  title: "Food Distribution",
+  amount: "Total: 625 kgs",
   icon: "DownloadOutlinedIcon",
 };
 
 export const campaign = {
-  title: "Campaign",
-  amount: "$48,352 revenue generated",
-  subtitle: "Includes extra misc expenditures and costs",
+  title: "People Affected",
+  amount: "48,352 lives affected",
+  subtitle: "Includes people who received food and fertilizer",
 };
 
 

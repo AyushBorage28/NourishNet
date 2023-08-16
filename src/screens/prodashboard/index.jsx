@@ -167,7 +167,7 @@ const ProDashboard = () => {
             p="15px"
           >
             <Typography color={colors.grey[100]} variant="h5" fontWeight="600">
-              Recent Transactions
+              Recent Collaborations
             </Typography>
           </Box>
           {mockTransactions.map((transaction, i) => (
@@ -197,7 +197,7 @@ const ProDashboard = () => {
                 p="5px 10px"
                 borderRadius="4px"
               >
-                ${transaction.cost}
+                {transaction.cost}
               </Box>
             </Box>
           ))}
@@ -240,7 +240,7 @@ const ProDashboard = () => {
             fontWeight="600"
             sx={{ padding: "30px 30px 0 30px" }}
           >
-            Sales Quantity
+            Food Categories 
           </Typography>
           <Box height="250px" mt="-20px">
             <BarChart isProDashboard={true} />
@@ -257,7 +257,7 @@ const ProDashboard = () => {
             fontWeight="600"
             sx={{ marginBottom: "15px" }}
           >
-            Geography Based Traffic
+           Hunger Zones Cured
           </Typography>
           <Box height="200px">
             <GeographyChart isProDashboard={true} />

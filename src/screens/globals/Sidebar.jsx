@@ -18,8 +18,13 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { people01 } from "../../assets";
-import { FoodBankOutlined, MessageOutlined, NotificationAddOutlined, RestaurantOutlined } from "@mui/icons-material";
-import FastfoodOutlinedIcon from '@mui/icons-material/FastfoodOutlined';
+import {
+  FoodBankOutlined,
+  MessageOutlined,
+  NotificationAddOutlined,
+  RestaurantOutlined,
+} from "@mui/icons-material";
+import FastfoodOutlinedIcon from "@mui/icons-material/FastfoodOutlined";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -138,19 +143,6 @@ const Sidebar = () => {
             >
               Data
             </Typography>
-            <Item
-              title="Manage Food"
-              to="/eateryform"
-              icon={<FastfoodOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />    <Item
-            title="Available Food "
-            to="/listfood"
-            icon={<FastfoodOutlinedIcon />}
-            selected={selected}
-            setSelected={setSelected}
-          />
             <Item
               title="Contacts Information"
               to="/contacts"
