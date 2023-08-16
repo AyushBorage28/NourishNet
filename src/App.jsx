@@ -32,6 +32,7 @@ import EateryForm from "./screens/eateryform";
 import ListFood from "./listfood";
 import SignUp from "./screens/SignUp";
 import ChatUI from "./screens/chat";
+import Contact from "./screens/Contact";
 
 import NGOs from "./screens/Ngos";
 
@@ -104,6 +105,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="/joinUs" element={<JoinUs />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/signup/:type" element={<SignUp />} />
