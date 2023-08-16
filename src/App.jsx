@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./screens/Home";
 import Login from "./screens/Login";
-import "./App.css"
+import "./App.css";
 import JoinUs from "./screens/JoinUs";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -25,11 +25,11 @@ import Sidebar from "./screens/globals/Sidebar";
 
 import Calendar from "./screens/calendar";
 
-
 import Horeca from "./screens/Horeca";
 import PremiumFeatures from "./screens/premium";
 import EateryForm from "./screens/eateryform";
 import SignUp from "./screens/SignUp";
+import ChatUI from "./screens/chat";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -40,6 +40,7 @@ const App = () => {
     "/prodashboard",
     "/dashboard",
     "/team",
+    "/chat",
     "/eateryform",
     "/contacts",
     "/invoices",
@@ -81,6 +82,7 @@ const App = () => {
               <Route path="/prodashboard" element={<ProDashboard />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
+              <Route path="/chat" element={<ChatUI />} />
 
               <Route path="/contacts" element={<Contacts />} />
 

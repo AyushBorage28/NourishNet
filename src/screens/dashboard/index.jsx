@@ -78,10 +78,10 @@ const Dashboard = () => {
                 label="Your Name"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.firstName}
-                name="firstName"
-                error={!!touched.firstName && !!errors.firstName}
-                helperText={touched.firstName && errors.firstName}
+                value={values.name}
+                name="name"
+                error={!!touched.name && !!errors.name}
+                helperText={touched.name && errors.name}
                 sx={{ gridColumn: "span 2" }}
               />
               <TextField
@@ -97,7 +97,7 @@ const Dashboard = () => {
                 helperText={touched.businessName && errors.businessName}
                 sx={{ gridColumn: "span 2" }}
               />
-              <TextField
+              {/* <TextField
                 fullWidth
                 variant="filled"
                 type="text"
@@ -109,7 +109,7 @@ const Dashboard = () => {
                 error={!!touched.email && !!errors.email}
                 helperText={touched.email && errors.email}
                 sx={{ gridColumn: "span 4" }}
-              />
+              /> */}
               <TextField
                 fullWidth
                 variant="filled"
@@ -166,7 +166,7 @@ const phoneRegExp =
   /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
 const checkoutSchema = yup.object().shape({
-  firstName: yup.string().required("required"),
+  name: yup.string().required("required"),
   businessName: yup.string().required("required"),
   email: yup.string().email("invalid email").required("required"),
   contact: yup
@@ -177,7 +177,7 @@ const checkoutSchema = yup.object().shape({
   address2: yup.string().required("required"),
 });
 const initialValues = {
-  firstName: "",
+  name: "",
   businessName: "",
   email: "",
   contact: "",

@@ -14,7 +14,6 @@ import { Formik, Form } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
-import CameraAltIcon from "@mui/icons-material/CameraAlt";
 
 const EateryForm = () => {
   const initialValues = {
@@ -62,13 +61,20 @@ const EateryForm = () => {
       <Header title="LIST YOUR FOOD" subtitle="Add your surplus food here" />
 
       {/* Image Upload Code (Removed) */}
-      
+
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleFormSubmit}
       >
-        {({ values, errors, touched, handleBlur, handleChange, handleSubmit }) => (
+        {({
+          values,
+          errors,
+          touched,
+          handleBlur,
+          handleChange,
+          handleSubmit,
+        }) => (
           <Form>
             <Typography variant="h6">Food Type and Quantity</Typography>
 
@@ -84,9 +90,9 @@ const EateryForm = () => {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   >
-                    <MenuItem value="meat">Meat</MenuItem>
                     <MenuItem value="pulses">Pulses and Cereals</MenuItem>
                     <MenuItem value="curries">Curries</MenuItem>
+                    <MenuItem value="meat">Meat</MenuItem>
                     <MenuItem value="beverages">Beverages</MenuItem>
                   </Select>
                 </FormControl>
@@ -109,7 +115,6 @@ const EateryForm = () => {
               </Grid>
             </Grid>
 
-         
             <Typography variant="h6" sx={{ marginTop: "20px" }}>
               Date of Cooking and Date of Expiry
             </Typography>
@@ -149,13 +154,13 @@ const EateryForm = () => {
               </Grid>
             </Grid>
             <Typography variant="h6" sx={{ marginTop: "20px" }}>
-             Instructions to add
+              Instructions to add
             </Typography>
 
             <TextField
               id="description"
               name="description"
-              label="Food Description"
+              label="Any specific Instructions, You Would Like to add."
               multiline
               rows={4}
               value={values.description}
@@ -181,4 +186,3 @@ const EateryForm = () => {
 };
 
 export default EateryForm;
-
