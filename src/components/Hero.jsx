@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { heroImage } from "../assets";
 import { FaArrowRight, FaPhoneAlt } from "react-icons/fa";
@@ -20,7 +19,6 @@ const Hero = () => {
     transform: "rotate(360deg)",
     animation: "rotation 20s linear infinite",
   };
-
 
   const location = async () => {
     const successCallback = (position) => {
@@ -53,15 +51,15 @@ const Hero = () => {
           variants={textVariants}
         >
           <h1 className="text-4xl font-extrabold leading-tight md:text-5xl xl:text-6xl text-gray-800 dark:text-white">
-          From Excess to Equity
+            From Excess to Equity
           </h1>
           <h3 className="mt-4 text-xl font-semibold text-gray-600 dark:text-gray-300">
             Nourishing a Better Tomorrow
           </h3>
           <p className="mt-6 text-lg text-gray-600 dark:text-gray-400">
             Bridging the HoReCa Industry and NGOs for Instant Food Rescue and
-            Community Nourishment. Join us and transform food waste into
-            hopeful meals with NourishNet.
+            Community Nourishment. Join us and transform food waste into hopeful
+            meals with NourishNet.
           </p>
           <div className="mt-8 space-x-4">
             <a
@@ -71,7 +69,7 @@ const Hero = () => {
               Join us <FaArrowRight className="ml-2" />
             </a>
             <a
-              href="#"
+              href="/dashboard"
               className="inline-flex items-center px-6 py-3 text-base font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-200 transition-colors"
             >
               Speak to Sales <FaPhoneAlt className="ml-2" />
@@ -84,7 +82,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-               <motion.img
+          <motion.img
             src={heroImage}
             alt="mockup"
             style={rotatingImageStyles}

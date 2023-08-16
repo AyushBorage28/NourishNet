@@ -17,6 +17,21 @@ import people02 from "./people02.png";
 import people03 from "./people03.png";
 import demoRestaurant from "./demoRestaurant.jpeg";
 
+import logo from "./logo.png"
+import heroImage from "./heroImage.png"
+import HoReCa from "./HoReCa.png"
+import NGO from "./NGO.png"
+import Akshayapatra from "./Akshayapatra.png"
+import Marriott from "./Marriott.png"
+import Raddison from "./Raddison.png"
+import Taj from "./Taj.png"
+import Unicef from "./Unicef.png"
+import WWF from "./WWF.png"
+import Partnership from "./Partnership.png"
+import CollectFood from "./CollectFood.png"
+import FoodDonation from "./FoodDonation.png"
+import NgoDonate from "./NgoDonate.png"
+
 export {
   demoRestaurant,
   card,
@@ -34,4 +49,6 @@ export {
   people01,
   people02,
   people03,
+  logo, heroImage, HoReCa,
+  NGO, Akshayapatra, Marriott, Raddison, Taj, Unicef, WWF, Partnership, CollectFood, FoodDonation, NgoDonate
 };

@@ -25,6 +25,8 @@ import Horeca from "./screens/Horeca";
 import PremiumFeatures from "./screens/premium";
 import EateryForm from "./screens/eateryform";
 import Home from "./screens/Home";
+import JoinUs from "./screens/JoinUs";
+import SignUp from "./screens/SignUp";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -67,7 +69,8 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
-              {/* <Route path="/signup" element={<SignUp />} /> */}
+              <Route path="/joinUs" element={<JoinUs />} />
+              <Route path="/signup" element={<SignUp />} />
               <Route path="/premium" element={<PremiumFeatures />} />
               <Route path="/eateryform" element={<EateryForm />} />
               <Route path="/prodashboard" element={<ProDashboard />} />
