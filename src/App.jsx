@@ -33,7 +33,6 @@ import ListFood from "./listfood";
 import SignUp from "./screens/SignUp";
 import ChatUI from "./screens/chat";
 
-
 const App = () => {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
@@ -44,7 +43,7 @@ const App = () => {
 
   const allowedRoutes = [
     "/prodashboard",
-    "/dashboard", 
+    "/dashboard",
     "/team",
     "/chat",
     "/eateryform",
@@ -63,17 +62,14 @@ const App = () => {
     "/geography",
   ];
 
-
-const ngoallowedRoutes=[
-  "/ngocalender",
-"/ngodashboard",
-"/listngoHoreca",
-"/ngocontacts",
-"/ngoinvoices",
-"/ngochat",
-
-
-]
+  const ngoallowedRoutes = [
+    "/ngocalendar",
+    "/ngodashboard",
+    "/listngoHoreca",
+    "/ngocontacts",
+    "/ngoinvoices",
+    "/ngochat",
+  ];
 
   const shouldDisplaySidebarAndTopbar = allowedRoutes.includes(
     location.pathname
@@ -90,7 +86,9 @@ const ngoallowedRoutes=[
         {/* reset the css to default */}
         <div className="app">
           {shouldDisplaySidebarAndTopbar && <Sidebar isSidebar={isSidebar} />}
-          {shouldDisplayNgoSidebarAndTopbar && <NgoSidebar isNgoSidebar={isNgoSidebar} />}
+          {shouldDisplayNgoSidebarAndTopbar && (
+            <NgoSidebar isNgoSidebar={isNgoSidebar} />
+          )}
           <main className="content">
             {shouldDisplaySidebarAndTopbar && (
               <Topbar setIsSidebar={setIsSidebar} />
@@ -114,8 +112,6 @@ const ngoallowedRoutes=[
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
               <Route path="/chat" element={<ChatUI />} />
-             
-
 
               {/* <Route path="/chat" element={<Chat />} />
               <Route path="/ngochat" element={<Chat />} />
@@ -137,14 +133,11 @@ const ngoallowedRoutes=[
               <Route path="/line" element={<Line />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/ngocalendar" element={<Calendar />} />
-           
 
               <Route path="/geography" element={<Geography />} />
             </Routes>
           </main>
         </div>
-
-        
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
