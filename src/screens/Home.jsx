@@ -6,6 +6,7 @@ import Features from "../components/Features";
 import ImageSection from "../components/ImageSection";
 import Trial from "../components/Trial";
 import Footer from "../components/Footer";
+import HowWeWork from "../components/HowWeWork";
 
 const Home = () => {
   return (
@@ -18,11 +19,13 @@ const Home = () => {
     </div>
     <div className="sm:px-16 px-6 flex justify-center items-center ">
       <div className="xl:max-w-[1280px] w-full">
-      <Stats />
-      <Features />
-      <ImageSection />
-      <Trial />
     
+      <Features />
+      <HowWeWork/>
+      <ImageSection />
+          <Stats />
+      <Trial />
+  
       </div>
     
       </div>
