@@ -1,21 +1,32 @@
 import { useState } from "react";
 import { FaUtensils, FaHandsHelping } from "react-icons/fa";
+import { motion } from "framer-motion"; // Import motion from framer-motion
+import { JoinUsImage } from "../assets";
 
 const JoinUs = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const handleOptionChange = (option) => {
     setSelectedOption(option);
   };
+
   return (
-    <div>
-      <div className="grid py-8 px-12 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-        <div className="place-self-center mr-auto lg:col-span-7">
-          <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">
-            Welcome to NourishNet!
-          </h1>
-          <p className="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-            Connecting Food and Hearts
-          </p>
+    <div className="grid py-8 px-12 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      {/* Left Side: Image */}
+   
+
+      {/* Right Side: Content */}
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="place-self-center mr-auto lg:col-span-7"
+      >
+        <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">
+          Welcome to NourishNet!
+        </h1>
+        <p className="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+          Connecting Food and Hearts
+        </p>
 
           <div className="space-y-8 mb-8">
             {/* First Card */}
@@ -76,9 +87,15 @@ const JoinUs = () => {
           >
             Create Account
           </a>
-        </div>
-        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex"></div>
-      </div>
+          </motion.div>
+          <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="hidden lg:block lg:col-span-5"
+      >
+        <img src={JoinUsImage} alt="" className="h-full" />
+      </motion.div>
     </div>
   );
 };

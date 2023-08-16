@@ -11,6 +11,7 @@ import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./screens/globals/Topbar";
 
 import ProDashboard from "./screens/prodashboard";
+import NgoDashboard from "./screens/NgoDashboard";
 import Dashboard from "./screens/dashboard";
 import Team from "./screens/team";
 import Invoices from "./screens/invoices";
@@ -28,8 +29,10 @@ import Calendar from "./screens/calendar";
 import Horeca from "./screens/Horeca";
 import PremiumFeatures from "./screens/premium";
 import EateryForm from "./screens/eateryform";
+import ListFood from "./listfood";
 import SignUp from "./screens/SignUp";
 import ChatUI from "./screens/chat";
+
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -39,6 +42,7 @@ const App = () => {
   const allowedRoutes = [
     "/prodashboard",
     "/dashboard",
+    "/ngodashboard",
     "/team",
     "/chat",
     "/eateryform",
@@ -49,6 +53,9 @@ const App = () => {
     "/addhoreca",
     "/listHoreca",
     "/bar",
+    "/listfood",
+    
+
     "/pie",
     "/line",
     "/calendar",
@@ -78,8 +85,10 @@ const App = () => {
               <Route path="/signup/:type" element={<SignUp />} />
 
               <Route path="/premium" element={<PremiumFeatures />} />
+              <Route path="/ngodashboard" element={<NgoDashboard />} />
               <Route path="/eateryform" element={<EateryForm />} />
               <Route path="/prodashboard" element={<ProDashboard />} />
+              <Route path="/listfood" element={<ListFood/>} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
               <Route path="/chat" element={<ChatUI />} />
