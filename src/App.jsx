@@ -42,7 +42,7 @@ import Sidebar from "./screens/globals/Sidebar";
 import Calendar from "./screens/calendar";
 
 import Login from "./screens/Login";
-import SignUp from "./screens/SignUp";
+
 import Horeca from "./screens/Horeca";
 import PremiumFeatures from "./screens/premium";
 import EateryForm from "./screens/eateryform";
