@@ -79,5 +79,4 @@ router.post('/login', login)
       .get('/profile', protect, getUserProfile)
       .put('/profile', protect, updateUserProfile)
 
-
 export default router

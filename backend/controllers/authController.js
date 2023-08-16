@@ -3,7 +3,7 @@ import User from "../models/userModel.js";
 import generateToken from "../utils/generateToken.js";
 
 const login = asyncHandler(async (req, res) => {
-    const { email, password } = req.body
+    const { email, password, location } = req.body
     const regx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     if (!regx.test(email)) {
       return res.status(400).json({ message: 'Enter a valid email ID' })
@@ -22,8 +22,7 @@ const login = asyncHandler(async (req, res) => {
 })
 
 const register = asyncHandler(async (req, res) => {
-
-    const { name, email, password, type } = req.body
+    const { name, email, password, type, location } = req.body
     const regx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     if (!regx.test(email)) {
       return res.status(400).json({ message: 'Enter a valid email ID' })
@@ -32,7 +31,7 @@ const register = asyncHandler(async (req, res) => {
     if (user)
       return res.status(401).json({ message: 'This email ID is already registered' })
 
-    const newUser = await User.create({ name, email, password, type })
+    const newUser = await User.create({ name, email, password, type, location })
 
     if (!newUser)
     return res.status(400).json({ message: 'Invalid user data' })
@@ -77,4 +76,4 @@ const getUserById = asyncHandler(async (req, res) => {
     }
   })
 
-export { login, register, getUserProfile, updateUserProfile, getHoReKaUsers, getNGOUsers }
+export { login, register, getUserProfile, updateUserProfile, getHoReKaUsers, getNGOUsers, getUserById }
