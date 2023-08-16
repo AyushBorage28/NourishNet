@@ -46,6 +46,11 @@ const Navbar = () => {
           >
             Sign up
           </a>
+
+
+
+          {/* MObile menu */}
+          
           <motion.button
             data-collapse-toggle="mobile-menu-2"
             type="button"

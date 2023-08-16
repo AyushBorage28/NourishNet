@@ -4,7 +4,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./screens/Home";
 import Login from "./screens/Login";
 import "./App.css"
-import SignUp from "./screens/Signup";
 import JoinUs from "./screens/JoinUs";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -30,6 +29,7 @@ import Calendar from "./screens/calendar";
 import Horeca from "./screens/Horeca";
 import PremiumFeatures from "./screens/premium";
 import EateryForm from "./screens/eateryform";
+import SignUp from "./screens/SignUp";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -74,6 +74,8 @@ const App = () => {
               <Route path="/login" element={<Login />} />
               <Route path="/joinUs" element={<JoinUs />} />
               <Route path="/signup" element={<SignUp />} />
+              <Route path="/signup/:type" element={<SignUp />} />
+
               <Route path="/premium" element={<PremiumFeatures />} />
               <Route path="/eateryform" element={<EateryForm />} />
               <Route path="/prodashboard" element={<ProDashboard />} />

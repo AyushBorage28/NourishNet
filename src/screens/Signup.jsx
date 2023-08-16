@@ -1,6 +1,41 @@
+import { useState } from "react";
 import { logo } from "../assets";
+import { useParams, useNavigate } from "react-router-dom"; // Import useParams
+import axios from "axios";
+import HOST from "../utils/Host.js";
 
 const SignUp = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { type } = useParams();
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (name === "email") setEmail(value);
+    else if (name === "password") setPassword(value);
+    console.log(email, password, type);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const doc = {
+      email,
+      password,
+      type,
+      name: "test",
+    };
+    try {
+      const response = await axios.post(`${HOST}/api/users/register`, doc);
+      console.log(response);
+      localStorage.setItem("token", response.data.token);
+      // Redirect to /dashboard on successful registration
+      navigate("/dashboard");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <section class="bg-gray-50 dark:bg-gray-900">
       <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -19,7 +54,11 @@ const SignUp = () => {
             <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Create and account
             </h1>
-            <form class="space-y-4 md:space-y-6" action="#">
+            <form
+              class="space-y-4 md:space-y-6"
+              action="#"
+              onSubmit={handleSubmit}
+            >
               <div>
                 <label
                   for="email"
@@ -29,6 +68,7 @@ const SignUp = () => {
                 </label>
                 <input
                   type="email"
+                  onChange={handleChange}
                   name="email"
                   id="email"
                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -45,6 +85,7 @@ const SignUp = () => {
                 </label>
                 <input
                   type="password"
+                  onChange={handleChange}
                   name="password"
                   id="password"
                   placeholder="••••••••"

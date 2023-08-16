@@ -4,12 +4,17 @@ import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
 import CameraAltIcon from "@mui/icons-material/CameraAlt"; // Import the camera icon
+import HOST from "../../utils/Host.js";
+import axios from "axios";
 
 const Dashboard = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const handleFormSubmit = (values) => {
     console.log(values);
+    axios.put(`${HOST}/api/users/profile`, values).then((res) => {
+      console.log(res);
+    });
   };
 
   return (

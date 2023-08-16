@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { FaUtensils, FaHandsHelping } from "react-icons/fa";
 
 const JoinUs = () => {
+  const [selectedOption, setSelectedOption] = useState(null);
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
+  };
   return (
     <div>
       <div className="grid py-8 px-12 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
@@ -17,7 +22,12 @@ const JoinUs = () => {
             <div>
               <a
                 href="#"
-                className="block p-4 bg-white rounded-lg transition duration-300 hover:bg-gray-100 hover:border-primary-700 border border-transparent"
+                onClick={() => handleOptionChange("HoReKa")}
+                className={`block p-4 bg-white rounded-lg transition duration-300 hover:bg-gray-100 ${
+                  selectedOption === "HoReCa"
+                    ? "border-primary-700 border"
+                    : "border-transparent"
+                }`}
               >
                 <div className="flex items-center mb-2">
                   <div className="flex-shrink-0">
@@ -37,7 +47,12 @@ const JoinUs = () => {
               {/* Second Card */}
               <a
                 href="#"
-                className="block p-4 bg-white rounded-lg transition duration-300 hover:bg-gray-100 hover:border-primary-700 border border-transparent"
+                onClick={() => handleOptionChange("NGO")}
+                className={`block p-4 bg-white rounded-lg transition duration-300 hover:bg-gray-100 ${
+                  selectedOption === "NGO"
+                    ? "border-primary-700 border"
+                    : "border-transparent"
+                }`}
               >
                 <div className="flex items-center mb-2">
                   <div className="flex-shrink-0">
@@ -56,7 +71,7 @@ const JoinUs = () => {
           </div>
 
           <a
-            href="/signup"
+            href={`/signup/${selectedOption}`}
             className="inline-flex justify-center items-center mt-6 py-3 px-5 mr-3 text-base font-medium text-center text-white rounded-lg bg-[#eda277] hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
           >
             Create Account
