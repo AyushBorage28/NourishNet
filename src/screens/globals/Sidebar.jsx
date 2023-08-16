@@ -144,7 +144,13 @@ const Sidebar = () => {
               icon={<FastfoodOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            />    <Item
+            title="Available Food "
+            to="/listfood"
+            icon={<FastfoodOutlinedIcon />}
+            selected={selected}
+            setSelected={setSelected}
+          />
             <Item
               title="Contacts Information"
               to="/contacts"
