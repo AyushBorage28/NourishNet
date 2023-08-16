@@ -125,7 +125,7 @@ const Sidebar = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="Premium"
-              to="/prodashboard"
+              to="/premium"
               icon={<FaGem />}
               selected={selected}
               setSelected={setSelected}
