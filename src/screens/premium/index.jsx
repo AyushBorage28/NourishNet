@@ -81,7 +81,7 @@ const PremiumFeatures = () => {
         >
           <CardContent>
             <Typography variant="h6" style={{ color: "green", marginBottom: "8px", fontSize: "20px" }}>FREE</Typography>
-            <Typography variant="h5" style={{ color: "yellow", fontSize: "28px", marginBottom: "12px", textAlign: "left" }}>Free Services</Typography>
+            <Typography variant="h5" style={{ color: "red", fontSize: "28px", marginBottom: "12px", textAlign: "left" }}>Free Services</Typography>
             <ul style={{ listStyle: "none", padding: 0, marginTop: "12px", textAlign: "left" }}>
               {features.map((feature, index) => (
                 <li key={index} style={{ marginBottom: "8px", display: "flex", alignItems: "center" }}>

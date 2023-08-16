@@ -7,6 +7,7 @@ import HOST from "../utils/Host.js";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const { type } = useParams();
   const navigate = useNavigate();
 
@@ -14,7 +15,8 @@ const SignUp = () => {
     const { name, value } = e.target;
     if (name === "email") setEmail(value);
     else if (name === "password") setPassword(value);
-    console.log(email, password, type);
+    else if (name === "name") setName(value);
+    console.log(email, password, type, name);
   };
 
   const handleSubmit = async (e) => {
@@ -23,7 +25,7 @@ const SignUp = () => {
       email,
       password,
       type,
-      name: "test",
+      name,
     };
     try {
       const response = await axios.post(`${HOST}/api/users/register`, doc);
@@ -61,6 +63,23 @@ const SignUp = () => {
             >
               <div>
                 <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Your name
+                </label>
+                <input
+                  type="name"
+                  onChange={handleChange}
+                  name="name"
+                  id="name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="name"
+                  required=""
+                />
+              </div>
+              <div>
+                <label
                   for="email"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
@@ -76,6 +95,7 @@ const SignUp = () => {
                   required=""
                 />
               </div>
+
               <div>
                 <label
                   for="password"
@@ -109,6 +129,7 @@ const SignUp = () => {
                   required=""
                 />
               </div>
+
               <div class="flex items-start">
                 <div class="flex items-center h-5">
                   <input

@@ -160,22 +160,22 @@ export const footerLinks = [
 
 export const stats = [
   {
-    "title": "12,361",
-    "subtitle": "Emails Sent",
+    "title": "125 tonnes",
+    "subtitle": "Food Saved",
     "progress": "0.75",
     "increase": "+14%",
     "icon": "EmailIcon"
   },
   {
-    "title": "431,225",
-    "subtitle": "Sales Obtained",
+    "title": "23",
+    "subtitle": "NGO's Supported  ",
     "progress": "0.50",
-    "increase": "+21%",
+    "increase": "+11%",
     "icon": "PointOfSaleIcon"
   },
   {
-    "title": "32,441",
-    "subtitle": "New Clients",
+    "title": "1,291",
+    "subtitle": "People fed",
     "progress": "0.30",
     "increase": "+5%",
     "icon": "PersonAddIcon"

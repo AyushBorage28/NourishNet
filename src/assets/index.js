@@ -16,7 +16,7 @@ import people01 from "./people01.jpeg";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
 import demoRestaurant from "./demoRestaurant.jpeg";
-import JoinUsImage from "./JoinUsImage.png";
+import JoinUsImage from "./JoinUsImage.jpg";
 
 import logo from "./logo.png"
 import heroImage from "./heroImage.png"

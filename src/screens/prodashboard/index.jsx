@@ -17,6 +17,7 @@ import {
   PersonAdd as PersonAddIcon,
   Traffic as TrafficIcon,
 } from "@mui/icons-material";
+import {FoodBankIcon as FoodBankIcon} from '@mui/icons-material/FoodBank';
 
 const ProDashboard = () => {
   const theme = useTheme();
@@ -51,6 +52,12 @@ const ProDashboard = () => {
       case "DownloadOutlinedIcon":
         return (
           <DownloadOutlinedIcon
+            sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+          />
+        );
+        case "Food":
+        return (
+          <FoodBankIcon
             sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
           />
         );
@@ -204,7 +211,7 @@ const ProDashboard = () => {
           p="30px"
         >
           <Typography variant="h5" fontWeight="600">
-           {campaign.title}
+            {campaign.title}
           </Typography>
           <Box
             display="flex"

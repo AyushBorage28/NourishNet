@@ -69,7 +69,7 @@ const Hero = () => {
               Join us <FaArrowRight className="ml-2" />
             </a>
             <a
-              href="/dashboard"
+              href="/contactUs"
               className="inline-flex items-center px-6 py-3 text-base font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-200 transition-colors"
             >
               Speak to Sales <FaPhoneAlt className="ml-2" />

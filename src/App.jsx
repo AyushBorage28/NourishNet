@@ -54,7 +54,6 @@ const App = () => {
     "/listHoreca",
     "/bar",
     "/listfood",
-    
 
     "/pie",
     "/line",
@@ -88,10 +87,11 @@ const App = () => {
               <Route path="/ngodashboard" element={<NgoDashboard />} />
               <Route path="/eateryform" element={<EateryForm />} />
               <Route path="/prodashboard" element={<ProDashboard />} />
-              <Route path="/listfood" element={<ListFood/>} />
+              <Route path="/listfood" element={<ListFood />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
               <Route path="/chat" element={<ChatUI />} />
+             
 
               <Route path="/contacts" element={<Contacts />} />
 
