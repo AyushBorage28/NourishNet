@@ -24,7 +24,7 @@ const StyledIcon = styled.span`
   transition: color 0.3s;
 
   ${StyledCard}:hover & {
-    color: #f39c12; /* Change hover color to a complementary color */
+    color: #4cceac; /* Change hover color to a complementary color */
   }
 `;
 

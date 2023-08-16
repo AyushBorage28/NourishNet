@@ -1,9 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 
 const Trial = () => {
   return (
     <>
-      <section className="bg-gray-50 dark:bg-gray-900 dark:bg-gray-800">
+    <motion.section
+        initial={{ opacity: 0 }} // Initial animation properties
+        animate={{ opacity: 1 }} // Animation properties to animate to
+        exit={{ opacity: 0 }} // Animation properties on exit
+        transition={{ duration: 0.5 }} // Transition duration
+        className="bg-gray-50 dark:bg-gray-900 dark:bg-gray-800"
+      >
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
             <h2 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
@@ -42,16 +49,22 @@ const Trial = () => {
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="bg-white dark:bg-gray-900">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }} // Initial animation properties
+        animate={{ opacity: 1, y: 0 }} // Animation properties to animate to
+        exit={{ opacity: 0 }} // Animation properties on exit
+        transition={{ duration: 0.5, delay: 0.2 }} // Transition duration with delay
+        className="bg-white dark:bg-gray-900"
+      >
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-sm text-center">
             <h2 className="mb-4 text-4xl font-extrabold leading-tight text-gray-900 dark:text-white">
               Join our platform today
             </h2>
             <p className="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">
-              Try Flowbite Platform for 30 days. No credit card required.
+            Empowering Goodness, Minimizing Waste
             </p>
             <a
               href="#"
@@ -61,7 +74,7 @@ const Trial = () => {
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };
