@@ -29,7 +29,9 @@ import Calendar from "./screens/calendar";
 import Horeca from "./screens/Horeca";
 import PremiumFeatures from "./screens/premium";
 import EateryForm from "./screens/eateryform";
+import ListFood from "./listfood";
 import SignUp from "./screens/SignUp";
+
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -48,6 +50,9 @@ const App = () => {
     "/addhoreca",
     "/listHoreca",
     "/bar",
+    "/listfood",
+    
+
     "/pie",
     "/line",
     "/calendar",
@@ -79,6 +84,7 @@ const App = () => {
               <Route path="/premium" element={<PremiumFeatures />} />
               <Route path="/eateryform" element={<EateryForm />} />
               <Route path="/prodashboard" element={<ProDashboard />} />
+              <Route path="/listfood" element={<ListFood/>} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
 

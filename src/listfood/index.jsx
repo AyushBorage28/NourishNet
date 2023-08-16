@@ -1,72 +1,57 @@
-import { Box } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Button } from "@mui/material";  // Import Button from @mui/material
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { tokens } from "../../theme";
-import { mockDataContacts } from "../../data/mockData";
-import Header from "../../components/Header";
-
+import { tokens } from "../theme";
+import { mockDataFoods } from "../data/mockData";
+import Header from "../components/Header";
 import { useTheme } from "@mui/material";
-
-import CameraAltIcon from "@mui/icons-material/CameraAlt"; // Import the camera icon
-import HOST from "../../utils/Host.js";
-import axios from "axios";
-
 
 const ListFood = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
+  const [selectedRows, setSelectedRows] = useState([]);
+
+  const handleRowSelection = (selectedRowId) => {
+    if (!selectedRows.includes(selectedRowId)) {
+      setSelectedRows([...selectedRows, selectedRowId]);
+    }
+  };
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
-    { field: "registrarId", headerName: "Registrar ID" },
     {
-      field: "name",
-      headerName: "Name",
+      field: "restaurantName",
+      headerName: "Restaurant Name",
       flex: 1,
       cellClassName: "name-column--cell",
     },
+    { field: "quantity", headerName: "Quantity", type: "number", flex: 0.5 },
     {
-      field: "age",
-      headerName: "Age",
-      type: "number",
-      headerAlign: "left",
-      align: "left",
-    },
-    {
-      field: "phone",
-      headerName: "Phone Number",
+      field: "foodType",
+      headerName: "Food Type",
       flex: 1,
     },
+    { field: "expiryDate", headerName: "Expiry Date", flex: 1 },
+    { field: "address", headerName: "Address", flex: 1 },
+    { field: "description", headerName: "Description", flex: 1 },
     {
-      field: "email",
-      headerName: "Email",
-      flex: 1,
-    },
-    {
-      field: "address",
-      headerName: "Address",
-      flex: 1,
-    },
-    {
-      field: "city",
-      headerName: "City",
-      flex: 1,
-    },
-    {
-      field: "zipCode",
-      headerName: "Zip Code",
-      flex: 1,
+      field: "select",
+      headerName: "Select",
+      flex: 0.5,
+      renderCell: (params) => (
+        <Button
+          variant={selectedRows.includes(params.row.id) ? "contained" : "outlined"}
+          onClick={() => handleRowSelection(params.row.id)}
+          disabled={selectedRows.includes(params.row.id)}
+          sx={{ padding: "8px 16px" }}
+        >
+          {selectedRows.includes(params.row.id) ? "Selected" : "Select"}
+        </Button>
+      ),
     },
   ];
-
-  const handleFormSubmit = (values) => {
-    console.log(values);
-    axios.put(`${HOST}/api/users/profile`, values).then((res) => {
-      console.log(res);
-    });
-  };
-
-
+  
   return (
     <Box m="20px">
       <Header
@@ -106,9 +91,10 @@ const ListFood = () => {
         }}
       >
         <DataGrid
-          rows={mockDataContacts}
+          rows={mockDataFoods}
           columns={columns}
           components={{ Toolbar: GridToolbar }}
+          checkboxSelection
         />
       </Box>
     </Box>
