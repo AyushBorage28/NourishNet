@@ -23,10 +23,11 @@ const Login = () => {
     };
     try {
       const response = await axios.post(`${HOST}/api/users/login`, doc);
-      console.log(response);
+      console.log(response.data);
       localStorage.setItem("token", response.data.token);
       // Redirect to /dashboard on successful login
-      navigate("/dashboard");
+      if (response.data.user.type === "HoReKa") navigate("/dashboard");
+      else if (response.data.user.type === "NGO") navigate("/ngodashboard");
     } catch (error) {
       console.error(error);
     }
@@ -39,7 +40,7 @@ const Login = () => {
           href="#"
           className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
         >
-            <img
+          <img
             src={logo}
             className="mr-3 mt-[3rem] h-12 sm:h-20"
             alt="Flowbite Logo"

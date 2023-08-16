@@ -1,5 +1,6 @@
-import { Box, IconButton, useTheme } from "@mui/material";
-import { useContext } from "react";
+import { Box, IconButton, Menu, MenuItem, useTheme } from "@mui/material";
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { ColorModeContext, tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
@@ -14,6 +15,16 @@ const Topbar = () => {
   const colors = tokens(theme.palette.mode); //Bring dark/light tokens and add it to mui theme
   const colorMode = useContext(ColorModeContext); //
 
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
       <Box
@@ -26,7 +37,6 @@ const Topbar = () => {
         <IconButton type="button" sx={{ p: 1 }}>
           <SearchIcon />
         </IconButton>
-        
       </Box>
 
       <Box display="flex">
@@ -43,9 +53,29 @@ const Topbar = () => {
         <IconButton>
           <SettingsOutlinedIcon />
         </IconButton>
-        <IconButton>
+        <IconButton onClick={handleMenuOpen}>
           <PersonOutlinedIcon />
         </IconButton>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleMenuClose}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "right",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "right",
+          }}
+        >
+          <MenuItem onClick={handleMenuClose}>
+            <Link to="#">Profile</Link>
+          </MenuItem>
+          <MenuItem onClick={handleMenuClose}>
+            <Link to="/">Logout</Link>
+          </MenuItem>
+        </Menu>
       </Box>
     </Box>
   );
