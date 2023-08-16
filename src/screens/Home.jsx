@@ -7,6 +7,7 @@ import ImageSection from "../components/ImageSection";
 import Trial from "../components/Trial";
 import Footer from "../components/Footer";
 import HowWeWork from "../components/HowWeWork";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
