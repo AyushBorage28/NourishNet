@@ -33,6 +33,8 @@ import ListFood from "./listfood";
 import SignUp from "./screens/SignUp";
 import ChatUI from "./screens/chat";
 
+import NGOs from "./screens/Ngos";
+
 const App = () => {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
@@ -52,9 +54,9 @@ const App = () => {
     "/premium",
     "/form",
     "/addhoreca",
-    "/listHoreca",
+    "/Ngos",
+
     "/bar",
-    "/listfood",
 
     "/pie",
     "/line",
@@ -69,6 +71,8 @@ const App = () => {
     "/ngocontacts",
     "/ngoinvoices",
     "/ngochat",
+    "/listfood",
+    "/listHoreca",
   ];
 
   const shouldDisplaySidebarAndTopbar = allowedRoutes.includes(
@@ -103,6 +107,8 @@ const App = () => {
               <Route path="/joinUs" element={<JoinUs />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/signup/:type" element={<SignUp />} />
+
+              <Route path="/Ngos" element={<NGOs />} />
 
               <Route path="/premium" element={<PremiumFeatures />} />
               <Route path="/ngodashboard" element={<NgoDashboard />} />

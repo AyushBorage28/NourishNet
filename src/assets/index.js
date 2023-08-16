@@ -1,6 +1,8 @@
 
 
 import card from "./card.png";
+import ngo1 from "./ngo-1.jpg";
+import ngo2 from "./ngo-2.jpg";
 import dropbox from "./dropbox.png";
 import quotes from "./quotes.svg";
 import send from "./Send.svg";
@@ -34,6 +36,8 @@ import FoodDonation from "./FoodDonation.png"
 import NgoDonate from "./NgoDonate.png"
 
 export {
+  ngo1,
+  ngo2,
   demoRestaurant,
   card,
   dropbox,

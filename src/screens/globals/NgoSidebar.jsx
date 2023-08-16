@@ -18,8 +18,13 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { people01 } from "../../assets";
-import { FoodBankOutlined, MessageOutlined, NotificationAddOutlined, RestaurantOutlined } from "@mui/icons-material";
-import FastfoodOutlinedIcon from '@mui/icons-material/FastfoodOutlined';
+import {
+  FoodBankOutlined,
+  MessageOutlined,
+  NotificationAddOutlined,
+  RestaurantOutlined,
+} from "@mui/icons-material";
+import FastfoodOutlinedIcon from "@mui/icons-material/FastfoodOutlined";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -113,7 +118,7 @@ const NgoSidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Ayush B
+                  Ishpreet K
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
                   Manager Walmart
@@ -123,8 +128,6 @@ const NgoSidebar = () => {
           )}
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-           
-
             <Typography
               variant="h6"
               color={colors.grey[300]}
@@ -132,7 +135,13 @@ const NgoSidebar = () => {
             >
               Data
             </Typography>
-     
+            <Item
+              title="Available Food "
+              to="/listfood"
+              icon={<FastfoodOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
             <Item
               title="Contacts Information"
               to="/ngocontacts"
@@ -176,8 +185,6 @@ const NgoSidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
-            
           </Box>
         </Menu>
       </ProSidebar>

@@ -23,6 +23,7 @@ import {
   MessageOutlined,
   NotificationAddOutlined,
   RestaurantOutlined,
+  StoreOutlined,
 } from "@mui/icons-material";
 import FastfoodOutlinedIcon from "@mui/icons-material/FastfoodOutlined";
 
@@ -144,6 +145,13 @@ const Sidebar = () => {
               Data
             </Typography>
             <Item
+              title="Manage Food"
+              to="/eateryform"
+              icon={<FastfoodOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
               title="Contacts Information"
               to="/contacts"
               icon={<ContactsOutlinedIcon />}
@@ -166,9 +174,9 @@ const Sidebar = () => {
               Pages
             </Typography>
             <Item
-              title="All Restaurants"
-              to="/listHoreca"
-              icon={<RestaurantOutlined />}
+              title="All NGOs"
+              to="/Ngos"
+              icon={<StoreOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
