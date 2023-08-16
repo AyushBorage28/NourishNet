@@ -11,7 +11,7 @@ import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./screens/globals/Topbar";
 
 import ProDashboard from "./screens/prodashboard";
-import NgoDashboard from "./screens/NgoDashboard";
+import NgoDashboard from "./screens/ngodashboard";
 import Dashboard from "./screens/dashboard";
 import Team from "./screens/team";
 import Invoices from "./screens/invoices";
@@ -23,7 +23,7 @@ import Pie from "./screens/pie";
 
 import Geography from "./screens/geography";
 import Sidebar from "./screens/globals/Sidebar";
-
+import NgoSidebar from "./screens/globals/NgoSidebar";
 import Calendar from "./screens/calendar";
 
 import Horeca from "./screens/Horeca";
@@ -37,12 +37,14 @@ import ChatUI from "./screens/chat";
 const App = () => {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
+  const [isNgoSidebar, setIsNgoSidebar] = useState(true);
 
   const location = useLocation();
+  const ngolocation = useLocation();
+
   const allowedRoutes = [
     "/prodashboard",
-    "/dashboard",
-    "/ngodashboard",
+    "/dashboard", 
     "/team",
     "/chat",
     "/eateryform",
@@ -60,8 +62,25 @@ const App = () => {
     "/calendar",
     "/geography",
   ];
+
+
+const ngoallowedRoutes=[
+  "/ngocalender",
+"/ngodashboard",
+"/listngoHoreca",
+"/ngocontacts",
+"/ngoinvoices",
+"/ngochat",
+
+
+]
+
   const shouldDisplaySidebarAndTopbar = allowedRoutes.includes(
     location.pathname
+  );
+
+  const shouldDisplayNgoSidebarAndTopbar = ngoallowedRoutes.includes(
+    ngolocation.pathname
   );
 
   return (
@@ -71,9 +90,13 @@ const App = () => {
         {/* reset the css to default */}
         <div className="app">
           {shouldDisplaySidebarAndTopbar && <Sidebar isSidebar={isSidebar} />}
+          {shouldDisplayNgoSidebarAndTopbar && <NgoSidebar isNgoSidebar={isNgoSidebar} />}
           <main className="content">
             {shouldDisplaySidebarAndTopbar && (
               <Topbar setIsSidebar={setIsSidebar} />
+            )}
+            {shouldDisplayNgoSidebarAndTopbar && (
+              <Topbar setIsNgoSidebar={setIsNgoSidebar} />
             )}
 
             <Routes>
@@ -93,17 +116,28 @@ const App = () => {
               <Route path="/chat" element={<ChatUI />} />
              
 
+
+              {/* <Route path="/chat" element={<Chat />} />
+              <Route path="/ngochat" element={<Chat />} />
+      
+          */}
+
               <Route path="/contacts" element={<Contacts />} />
+              <Route path="/ngocontacts" element={<Contacts />} />
 
               <Route path="/invoices" element={<Invoices />} />
+              <Route path="/ngoinvoices" element={<Invoices />} />
 
               <Route path="/addhoreca" element={<AddHoreca />} />
               <Route path="/listHoreca" element={<Horeca />} />
+              <Route path="/listngoHoreca" element={<Horeca />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
 
               <Route path="/line" element={<Line />} />
               <Route path="/calendar" element={<Calendar />} />
+              <Route path="/ngocalendar" element={<Calendar />} />
+           
 
               <Route path="/geography" element={<Geography />} />
             </Routes>
