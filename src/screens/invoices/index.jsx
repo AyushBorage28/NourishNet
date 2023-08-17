@@ -11,7 +11,7 @@ const Invoices = () => {
     { field: "id", headerName: "ID" },
     {
       field: "name",
-      headerName: "Name",
+      headerName: "NGO Name",
       flex: 1,
       cellClassName: "name-column--cell",
     },
@@ -26,14 +26,9 @@ const Invoices = () => {
       flex: 1,
     },
     {
-      field: "cost",
-      headerName: "Cost",
+      field: "foodType",
+      headerName: "Food Type",
       flex: 1,
-      renderCell: (params) => (
-        <Typography color={colors.greenAccent[500]}>
-          ${params.row.cost}
-        </Typography>
-      ),
     },
     {
       field: "date",
@@ -41,6 +36,7 @@ const Invoices = () => {
       flex: 1,
     },
   ];
+  
 
   return (
     <Box m="20px">
