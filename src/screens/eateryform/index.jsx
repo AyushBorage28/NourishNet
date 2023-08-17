@@ -1,4 +1,5 @@
-import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Box,
   Button,
@@ -12,7 +13,7 @@ import {
 } from "@mui/material";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
-import useMediaQuery from "@mui/material/useMediaQuery";
+// import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
 
 const EateryForm = () => {
@@ -30,10 +31,21 @@ const EateryForm = () => {
     cookingDate: "",
   };
 
-  const isNonMobile = useMediaQuery("(min-width:600px)");
+  // const isNonMobile = useMediaQuery("(min-width:600px)");
 
-  const handleFormSubmit = (values) => {
+  const handleFormSubmit = async (values, { resetForm }) => {
     console.log(values);
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulating async operation
+    resetForm(); // Reset the form fields
+    toast.success("Food item added successfully!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   const validationSchema = yup.object().shape({
@@ -51,7 +63,6 @@ const EateryForm = () => {
     address2: yup.string().required("Required"),
     foodType: yup.string().required("Required"),
     quantity: yup.number().required("Required").positive().integer(),
-
     expiryDate: yup.string().required("Required"),
     cookingDate: yup.string().required("Required"),
   });
@@ -59,8 +70,6 @@ const EateryForm = () => {
   return (
     <Box m="20px">
       <Header title="LIST YOUR FOOD" subtitle="Add your surplus food here" />
-
-      {/* Image Upload Code (Removed) */}
 
       <Formik
         initialValues={initialValues}
@@ -75,7 +84,7 @@ const EateryForm = () => {
           handleChange,
           handleSubmit,
         }) => (
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Typography variant="h6">Food Type and Quantity</Typography>
 
             <Grid container spacing={2} sx={{ marginTop: "10px" }}>
@@ -173,7 +182,7 @@ const EateryForm = () => {
             />
 
             {/* Submit Button */}
-            <Box display="flex" justifyContent="end" mt="20px">
+            <Box display="flex" justifyContent="end" mt="20px" marginBottom="20px">
               <Button type="submit" color="secondary" variant="contained">
                 Add your food Item
               </Button>
@@ -181,6 +190,7 @@ const EateryForm = () => {
           </Form>
         )}
       </Formik>
+      <ToastContainer />
     </Box>
   );
 };

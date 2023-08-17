@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { logo } from "../assets";
-import { useParams, useNavigate } from "react-router-dom"; // Import useParams
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import HOST from "../utils/Host.js";
 
@@ -31,6 +31,7 @@ const SignUp = () => {
       const response = await axios.post(`${HOST}/api/users/register`, doc);
       // console.log(response);
       localStorage.setItem("token", response.data.token);
+      navigate("/dashboard");
       // console.log(response.data)
       if (response.data.newUser.type === "HoReKa") navigate("/dashboard");
       else if (response.data.newUser.type === "NGO") navigate("/ngodashboard");
@@ -41,7 +42,7 @@ const SignUp = () => {
   };
 
   return (
-    <section class="bg-gray-50 dark:bg-gray-900">
+    <section class="bg-gray-50 dark:bg-gray-900 py-20 ">
       <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <a
           href="#"
@@ -54,7 +55,7 @@ const SignUp = () => {
           />
         </a>
         <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-          <div class="p-6  space-y-4 md:space-y-6 sm:p-8">
+          <div class="py-8  space-y-4 md:space-y-6 sm:p-8">
             <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Create an account
             </h1>
