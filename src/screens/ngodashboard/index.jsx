@@ -8,6 +8,24 @@ import HOST from "../../utils/Host.js";
 import axios from "axios";
 
 const NgoDashboard = () => {
+  const location = async () => {
+    const successCallback = (position) => {
+      console.log("Latitude:", position.coords.latitude);
+      console.log("Longitude:", position.coords.longitude);
+    };
+
+    const errorCallback = (error) => {
+      console.log("Error getting location:", error);
+    };
+
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    } else {
+      console.log("Geolocation is not available.");
+    }
+  };
+
+  location();
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const handleFormSubmit = (values) => {

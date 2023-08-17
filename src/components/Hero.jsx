@@ -20,24 +20,6 @@ const Hero = () => {
     animation: "rotation 20s linear infinite",
   };
 
-  const location = async () => {
-    const successCallback = (position) => {
-      console.log("Latitude:", position.coords.latitude);
-      console.log("Longitude:", position.coords.longitude);
-    };
-
-    const errorCallback = (error) => {
-      console.log("Error getting location:", error);
-    };
-
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-    } else {
-      console.log("Geolocation is not available.");
-    }
-  };
-
-  location();
   return (
     <motion.section
       className="bg-white dark:bg-gray-900"
@@ -51,15 +33,15 @@ const Hero = () => {
           variants={textVariants}
         >
           <h1 className="text-4xl font-extrabold leading-tight md:text-5xl xl:text-6xl text-gray-800 dark:text-white">
-          From Excess to Equity
+            From Excess to Equity
           </h1>
           <h3 className="mt-4 text-xl font-semibold text-gray-600 dark:text-gray-300">
             Nourishing a Better Tomorrow
           </h3>
           <p className="mt-6 text-lg text-gray-600 dark:text-gray-400">
             Bridging the HoReCa Industry and NGOs for Instant Food Rescue and
-            Community Nourishment. Join us and transform food waste into
-            hopeful meals with NourishNet.
+            Community Nourishment. Join us and transform food waste into hopeful
+            meals with NourishNet.
           </p>
           <div className="mt-8 space-x-4">
             <a
@@ -69,7 +51,7 @@ const Hero = () => {
               Join us <FaArrowRight className="ml-2" />
             </a>
             <a
-              href="/contactUs"
+              href="/contact"
               className="inline-flex items-center px-6 py-3 text-base font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-200 transition-colors"
             >
               Speak to Sales <FaPhoneAlt className="ml-2" />

@@ -6,6 +6,24 @@ import Header from "../../components/Header";
 import CameraAltIcon from "@mui/icons-material/CameraAlt"; // Import the camera icon
 
 const Dashboard = () => {
+  const location = async () => {
+    const successCallback = (position) => {
+      console.log("Latitude:", position.coords.latitude);
+      console.log("Longitude:", position.coords.longitude);
+    };
+
+    const errorCallback = (error) => {
+      console.log("Error getting location:", error);
+    };
+
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    } else {
+      console.log("Geolocation is not available.");
+    }
+  };
+
+  location();
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const handleFormSubmit = (values) => {

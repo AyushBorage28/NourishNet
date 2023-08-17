@@ -5,6 +5,7 @@ import { JoinUsImage } from "../assets";
 
 const JoinUs = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+
   const handleOptionChange = (option) => {
     setSelectedOption(option);
   };
