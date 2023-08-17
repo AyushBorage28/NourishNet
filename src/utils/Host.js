@@ -1,2 +1,2 @@
-const HOST = 'http://localhost:3000';
+const HOST = 'https://nourishnet-backend-k736.onrender.com';
 export default HOST
