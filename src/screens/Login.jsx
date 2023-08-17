@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import HOST from "../utils/Host.js";
 import { logo } from "../assets/index.js";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,12 +25,42 @@ const Login = () => {
     };
     try {
       const response = await axios.post(`${HOST}/api/users/login`, doc);
-      // localStorage.setItem("token", response.data.token);
-      // Redirect to /dashboard on successful login
-      if (response.data.user.type === "HoReKa") navigate("/dashboard");
-      else if (response.data.user.type === "NGO") navigate("/ngodashboard");
+
+      console.log("Login response:", response.data);
+
+      if (response.data) {
+        localStorage.setItem("token", response.data.token);
+
+        console.log("Login successful!");
+
+        // Display toast before redirecting
+        toast.success("Login successful!", {
+          position: "top-left",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+
+        setTimeout(() => {
+          // Redirect after showing the toast
+          if (response.data.user.type === "HoReKa") navigate("/dashboard");
+          else if (response.data.user.type === "NGO") navigate("/ngodashboard");
+        }, 2000); // Adjust the timing if needed
+      }
     } catch (error) {
       console.error(error);
+      toast.error("Login failed. Please check your credentials.", {
+        position: "top-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
@@ -136,6 +169,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };

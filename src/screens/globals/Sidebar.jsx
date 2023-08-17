@@ -122,7 +122,7 @@ const Sidebar = () => {
                   Ayush B
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  Manager Walmart
+                  Mariott International
                 </Typography>
               </Box>
             </Box>
