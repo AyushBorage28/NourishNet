@@ -18,15 +18,15 @@ const Home = () => {
           <Hero />
         </div>
       </div>
-      <div className="sm:px-16 px-6 flex justify-center items-center ">
-        <div className="xl:max-w-[1280px] w-full">
+      <Stats />
+      
+       
           <Features />
           <HowWeWork />
           <ImageSection />
-          <Stats />
+         
           <Trial />
-        </div>
-      </div>
+        
       <Footer />
     </>
   );

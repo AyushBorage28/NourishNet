@@ -28,7 +28,7 @@ const Stats = () => {
   };
 
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white pt-18 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold text-center tracking-tight leading-tight text-gray-900 lg:mb-4 dark:text-white md:text-4xl">
           Our Impactful Partnerships
