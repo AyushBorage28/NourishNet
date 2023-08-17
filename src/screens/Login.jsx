@@ -26,12 +26,12 @@ const Login = () => {
     try {
       const response = await axios.post(`${HOST}/api/users/login`, doc);
 
-      console.log("Login response:", response.data);
+      // console.log("Login response:", response.data);
 
       if (response.data) {
         localStorage.setItem("token", response.data.token);
 
-        console.log("Login successful!");
+        // console.log("Login successful!");
 
         // Display toast before redirecting
         toast.success("Login successful!", {

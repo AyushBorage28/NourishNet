@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { logo } from "../assets";
 import { useParams, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import HOST from "../utils/Host.js";
 
@@ -28,11 +30,38 @@ const SignUp = () => {
     };
     try {
       const response = await axios.post(`${HOST}/api/users/register`, doc);
-      localStorage.setItem("token", response.data.token);
-      if (response.data.newUser.type === "HoReKa") navigate("/dashboard");
-      else if (response.data.newUser.type === "NGO") navigate("/ngodashboard");
+
+      if (response.data) {
+        localStorage.setItem("token", response.data.token);
+
+        toast.success("Your account has been created!", {
+          position: "top-left",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+
+        setTimeout(() => {
+          // Redirect after showing the toast
+          if (response.data.newUser.type === "HoReKa") navigate("/dashboard");
+          else if (response.data.newUser.type === "NGO")
+            navigate("/ngodashboard");
+        }, 2000); // Adjust the timing if needed
+      }
     } catch (error) {
       console.error(error);
+      toast.error("Signup failed. Please check your connection.", {
+        position: "top-left",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
@@ -173,6 +202,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };
