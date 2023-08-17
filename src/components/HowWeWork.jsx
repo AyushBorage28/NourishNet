@@ -2,10 +2,10 @@ import React from "react";
 
 const HowWeWork = () => {
   return (
-    <section className="text-gray-600 body-font">
-      <h1 className="text-5xl pt-10 font-extrabold text-gray-800 dark:text-white text-center">
+    <section className="text-gray-600 mt-3 body-font">
+       <h2 className="mb-4 text-4xl text-center font-extrabold text-gray-900 dark:text-white">
         How We Work
-      </h1>
+      </h2>
       <p className="mt-2 pt-2 text-center text-xl text-gray-600 dark:text-gray-300">
         Discover our process of rescuing and distributing surplus food to make a
         positive impact on communities.
