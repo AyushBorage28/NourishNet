@@ -7,7 +7,7 @@
     "dev": "concurrently \"npm run backend\" \"npm run start\"",
     "start": "vite",
     "backend": "nodemon backend/index.js",
-    "build": "concurrently \"vite build\" \"npm run backend\"",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
