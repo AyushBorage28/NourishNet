@@ -1,4 +1,6 @@
-# NourishNet Project - README
+# NourishNet- Food With a Smile
+
+![Screenshot 2023-08-17 185759](https://github.com/AyushBorage28/NourishNet/assets/99349720/83b134e7-3b61-4447-8497-b3ecea460e8a)
 
 Welcome to the NourishNet project repository! NourishNet is a full-stack application that serves as a bridge between the HoReCa (Hotels, Restaurants, Cafes) industry and NGOs (Non-Governmental Organizations), facilitating the efficient distribution of surplus food to those in need. This README will provide you with comprehensive information about the project's features, setup instructions, usage guidelines, and licensing.
 
