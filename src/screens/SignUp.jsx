@@ -16,7 +16,6 @@ const SignUp = () => {
     if (name === "email") setEmail(value);
     else if (name === "password") setPassword(value);
     else if (name === "name") setName(value);
-    console.log(email, password, type, name);
   };
 
   const handleSubmit = async (e) => {
@@ -29,13 +28,9 @@ const SignUp = () => {
     };
     try {
       const response = await axios.post(`${HOST}/api/users/register`, doc);
-      // console.log(response);
       localStorage.setItem("token", response.data.token);
-      navigate("/dashboard");
-      // console.log(response.data)
       if (response.data.newUser.type === "HoReKa") navigate("/dashboard");
       else if (response.data.newUser.type === "NGO") navigate("/ngodashboard");
-      // Redirect to /dashboard on successful registration
     } catch (error) {
       console.error(error);
     }

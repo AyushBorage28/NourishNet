@@ -12,7 +12,6 @@ const Login = () => {
     const { name, value } = e.target;
     if (name === "email") setEmail(value);
     else if (name === "password") setPassword(value);
-    console.log(email, password);
   };
 
   const handleSubmit = async (e) => {
@@ -23,8 +22,7 @@ const Login = () => {
     };
     try {
       const response = await axios.post(`${HOST}/api/users/login`, doc);
-      console.log(response.data);
-      localStorage.setItem("token", response.data.token);
+      // localStorage.setItem("token", response.data.token);
       // Redirect to /dashboard on successful login
       if (response.data.user.type === "HoReKa") navigate("/dashboard");
       else if (response.data.user.type === "NGO") navigate("/ngodashboard");
