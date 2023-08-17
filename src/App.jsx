@@ -121,10 +121,10 @@ const App = () => {
               <Route path="/team" element={<Team />} />
               <Route path="/chat" element={<ChatUI />} />
 
-              {/* <Route path="/chat" element={<Chat />} />
-              <Route path="/ngochat" element={<Chat />} />
+              <Route path="/chat" element={<ChatUI />} />
+              <Route path="/ngochat" element={<ChatUI />} />
       
-          */}
+         
 
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/ngocontacts" element={<Contacts />} />

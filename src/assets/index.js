@@ -34,8 +34,10 @@ import Partnership from "./Partnership.png"
 import CollectFood from "./CollectFood.png"
 import FoodDonation from "./FoodDonation.png"
 import NgoDonate from "./NgoDonate.png"
+import IK from "./IK.jpg"
 
 export {
+  IK,
   ngo1,
   ngo2,
   demoRestaurant,

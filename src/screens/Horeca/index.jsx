@@ -42,22 +42,22 @@ const Horeca = () => {
   const horecaData = [
     {
       image: demoRestaurant, //image URL from cloudinary
-      name: "Restaurant A",
-      location: "123 Main St, City",
+      name: "Hotel Centella",
+      location: "123 Mittal Road, Gwalior",
       distance: "2.5 km",
       phoneNumber: "123-456-7890",
     },
     {
       image: demoRestaurant,
-      name: "Hotel B",
-      location: "456 Park Ave, Town",
+      name: "Burger Budds",
+      location: "456 Tulsi Nagar, Gwalior",
       distance: "1.8 km",
       phoneNumber: "987-654-3210",
     },
     {
       image: demoRestaurant,
-      name: "Cafe C",
-      location: "789 Broad St, Village",
+      name: "Cafe Connection",
+      location: "789 Naya Bada Chauraha, Gwalior",
       distance: "3.2 km",
       phoneNumber: "555-123-4567",
     },

@@ -17,7 +17,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
-import { people01 } from "../../assets";
+import { IK, people01 } from "../../assets";
 import {
   FoodBankOutlined,
   MessageOutlined,
@@ -107,7 +107,7 @@ const NgoSidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={people01}
+                  src={IK}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -121,7 +121,7 @@ const NgoSidebar = () => {
                   Ishpreet K
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  Manager Walmart
+                  AkshyaPatra Foundation
                 </Typography>
               </Box>
             </Box>
