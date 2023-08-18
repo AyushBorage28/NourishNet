@@ -42,7 +42,7 @@ To set up the NourishNet project on your local machine, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/nourishnet.git
+   git clone https://github.com/AyushBorage28/NourishNet.git
 2. Run this command:
    ```bash
    npm install
