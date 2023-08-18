@@ -55,8 +55,8 @@ const ListFood = () => {
   return (
     <Box m="20px">
       <Header
-        title="CONTACTS"
-        subtitle="List of Contacts for Future Reference"
+        title="AVAILABLE FOOD"
+        subtitle=" Recent food items listed by the HoReCa"
       />
       <Box
         m="40px 0 0 0"
