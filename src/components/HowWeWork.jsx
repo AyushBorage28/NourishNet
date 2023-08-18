@@ -1,17 +1,47 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const HowWeWork = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  const containerVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { staggerChildren: 0.5 } },
+  };
+
+  const itemVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8 },
+  };
+
   return (
-    <section className="text-gray-600 bg-gray-100 mt-3 body-font">
-       <h2 className="mb-4 pt-8 lg:pt-16 text-4xl text-center font-extrabold text-gray-900 dark:text-white">
+    <motion.section
+      className="text-gray-600 bg-gray-100 mt-3 body-font"
+      initial="initial"
+      animate={inView ? "animate" : "initial"}
+      ref={ref}
+    >
+      <h2 className="mb-4 pt-8 lg:pt-16 text-4xl text-center font-extrabold text-gray-900 dark:text-white">
         How We Work
       </h2>
       <p className="mt-2 pt-2 text-center text-xl text-gray-600 dark:text-gray-300">
         Discover our process of rescuing and distributing surplus food to make a
         positive impact on communities.
       </p>
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+
+      <motion.div
+        className="container px-5 py-24 mx-auto"
+        variants={containerVariants}
+      >
+        <motion.div
+          className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col"
+          variants={itemVariants}
+        >
           <div className="sm:w-31 sm:h-31 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#de7e44] text-white flex-shrink-0">
             {/* Food SVG */}
             <svg
@@ -38,8 +68,12 @@ const HowWeWork = () => {
               and prevent wastage.
             </p>
           </div>
-        </div>
-        <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+        </motion.div>
+
+        <motion.div
+          className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col"
+          variants={itemVariants}
+        >
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
             <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
               Connect HoReCa with NGOs
@@ -65,8 +99,12 @@ const HowWeWork = () => {
               ></path>
             </svg>
           </div>
-        </div>
-        <div className="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
+        </motion.div>
+
+        <motion.div
+          className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col"
+          variants={itemVariants}
+        >
           <div className="sm:w-31 sm:h-31 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#de7e44] text-white flex-shrink-0">
             {/* Smile SVG */}
             <svg
@@ -104,9 +142,9 @@ const HowWeWork = () => {
               a positive impact on local nourishment.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 
