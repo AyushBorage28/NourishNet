@@ -18,15 +18,18 @@ const Home = () => {
           <Hero />
         </div>
       </div>
+
+<div className="py-4">
+
+      <Stats />
+</div>
       
-      
-       
-          <HowWeWork />
-          <Features />
-          <ImageSection />
-          <Stats />
-          <Trial />
-        
+      <HowWeWork />
+      <Features />
+      <ImageSection />
+
+      <Trial />
+
       <Footer />
     </>
   );

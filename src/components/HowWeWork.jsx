@@ -2,8 +2,8 @@ import React from "react";
 
 const HowWeWork = () => {
   return (
-    <section className="text-gray-600 mt-3 body-font">
-       <h2 className="mb-4 text-4xl text-center font-extrabold text-gray-900 dark:text-white">
+    <section className="text-gray-600 bg-gray-100 mt-3 body-font">
+       <h2 className="mb-4 pt-8 lg:pt-16 text-4xl text-center font-extrabold text-gray-900 dark:text-white">
         How We Work
       </h2>
       <p className="mt-2 pt-2 text-center text-xl text-gray-600 dark:text-gray-300">

@@ -9,7 +9,7 @@ const Trial = () => {
         animate={{ opacity: 1 }} // Animation properties to animate to
         exit={{ opacity: 0 }} // Animation properties on exit
         transition={{ duration: 0.5 }} // Transition duration
-        className="bg-gray-50 dark:bg-gray-900 dark:bg-gray-800"
+        className="bg-gray-100 dark:bg-gray-900 dark:bg-gray-800"
       >
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
@@ -18,16 +18,17 @@ const Trial = () => {
               <span className="font-extrabold">HoReCa and NGOs</span> Globally
             </h2>
             <p className="mb-4 font-light">
-              Track work across the enterprise through an open, collaborative
-              platform. Link issues across Jira and ingest data from other
-              software development tools, so your IT support and operations
-              teams have richer contextual information to rapidly respond to
-              requests, incidents, and changes.
+              As per the food wastage index report by UNEP, India experiences an
+              annual wastage of{" "}
+              <span className="font-extrabold">68,760,163 tonnes</span> of food,
+              with a significant portion originating from the HoReCa sector.
             </p>
             <p className="mb-4 font-medium">
-              Deliver great service experiences fast - without the complexity of
-              traditional ITSM solutions.Accelerate critical development work,
-              eliminate toil, and deploy changes with ease.
+              The HoReCa industry contributes significantly to this problem by
+              disposing of substantial quantities of prepared food daily,
+              thereby aggravating the situation. Moreover, the decomposition of
+              food in landfills releases methane, a greenhouse gas with even
+              greater potency than carbon dioxide.
             </p>
             <a
               href="#"

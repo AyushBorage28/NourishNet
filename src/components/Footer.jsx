@@ -5,7 +5,7 @@ import { logo } from "../assets";
 const Footer = () => {
   return (
     <motion.footer
-      className="p-4 bg-gray-50 sm:p-6 dark:bg-gray-800"
+      className="p-4 bg-gray-100 sm:p-6 dark:bg-gray-800"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
@@ -25,14 +25,11 @@ const Footer = () => {
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
                   <a href="/" className="hover:underline">
-                  Privacy Policy
+                    Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/"
-                    className="hover:underline"
-                  >
+                  <a href="/" className="hover:underline">
                     Terms &amp; Conditions
                   </a>
                 </li>
@@ -63,12 +60,15 @@ const Footer = () => {
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              Mail Us
+                Mail Us
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <a href="mailto:business.orionsolutions@gmail.com" className="hover:underline">
-                  orionsolutions@gmail.com
+                  <a
+                    href="mailto:business.orionsolutions@gmail.com"
+                    className="hover:underline"
+                  >
+                    orionsolutions@gmail.com
                   </a>
                 </li>
                 <li>

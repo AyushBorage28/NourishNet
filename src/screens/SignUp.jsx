@@ -66,7 +66,7 @@ const SignUp = () => {
   };
 
   return (
-    <section class="bg-gray-50 dark:bg-gray-900 py-20 ">
+    <section class="bg-gray-100 dark:bg-gray-900 py-20 ">
       <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <a
           href="#"
@@ -100,7 +100,7 @@ const SignUp = () => {
                   onChange={handleChange}
                   name="name"
                   id="name"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="name"
                   required=""
                 />
@@ -117,7 +117,7 @@ const SignUp = () => {
                   onChange={handleChange}
                   name="email"
                   id="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="name@company.com"
                   required=""
                 />
@@ -136,7 +136,7 @@ const SignUp = () => {
                   name="password"
                   id="password"
                   placeholder="••••••••"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   required=""
                 />
               </div>
@@ -152,7 +152,7 @@ const SignUp = () => {
                   name="confirm-password"
                   id="confirm-password"
                   placeholder="••••••••"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   required=""
                 />
               </div>
@@ -164,7 +164,7 @@ const SignUp = () => {
                     aria-describedby="terms"
                     type="checkbox"
                     class="w-4 h-4 border border-gray-300 rounded
-                          ring-primary-700 bg-gray-50 focus:ring-3 focus:ring-[#eda277] dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-700 dark:ring-offset-gray-800"
+                          ring-primary-700 bg-gray-100 focus:ring-3 focus:ring-[#eda277] dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-700 dark:ring-offset-gray-800"
                     required=""
                   />
                 </div>
