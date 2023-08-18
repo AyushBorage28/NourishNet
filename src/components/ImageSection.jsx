@@ -56,14 +56,14 @@ const ImageSection = () => {
           transition={{ duration: 1.5, ease: "easeOut" }} // Increased duration here as well
           className="grid grid-cols-2 gap-4 mt-8"
         >
-          <div className="relative h-96 overflow-hidden rounded-lg">
+          <div className="relative h-96 overflow-hidden rounded-lg transform transition duration-300 hover:scale-105 shadow-lg">
             <img
               className="absolute inset-0 w-full h-full object-cover"
               src={NGO}
               alt="office content 2"
             />
           </div>
-          <div className="relative h-96 overflow-hidden rounded-lg mt-4 lg:mt-10">
+          <div className="relative h-96 overflow-hidden rounded-lg mt-4 lg:mt-10 transform transition duration-300 hover:scale-105 shadow-lg">
             <img
               className="absolute inset-0 w-full h-full object-cover"
               src={HoReCa}

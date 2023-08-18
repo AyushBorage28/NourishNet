@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { FaUtensils, FaHandsHelping } from "react-icons/fa";
-import { motion } from "framer-motion"; // Import motion from framer-motion
-import { JoinUsImage } from "../assets";
+import { motion } from "framer-motion"; 
+import { JoinUsImage, ngoImage } from "../assets";
+
 
 const JoinUs = () => {
+
+
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleOptionChange = (option) => {
@@ -15,7 +18,7 @@ const JoinUs = () => {
       {/* Left Side: Image */}
 
       {/* Right Side: Content */}
-      <motion.div
+      <div
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
@@ -86,14 +89,27 @@ const JoinUs = () => {
         >
           Create Account
         </a>
-      </motion.div>
+      </div>
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        className="hidden lg:block lg:col-span-5"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut" }} // Increased duration here as well
+        className="grid grid-cols-2 gap-4 mt-8 sm:mt-[10rem]  lg:col-span-5"
       >
-        <img src={JoinUsImage} alt="" className="h-full" />
+        <div className="relative h-96 overflow-hidden rounded-lg transform transition duration-300 hover:scale-105 shadow-lg">
+          <img
+            className="absolute inset-0 w-full h-full object-cover"
+            src={JoinUsImage}
+            alt="office content 2"
+          />
+        </div>
+        <div className="relative h-96 overflow-hidden rounded-lg mt-4 lg:mt-10 transform transition duration-300 hover:scale-105 shadow-lg">
+            <img
+              className="absolute inset-0 w-full h-full object-cover"
+              src={ngoImage}
+              alt="office content 1"
+            />
+          </div>
       </motion.div>
     </div>
   );
