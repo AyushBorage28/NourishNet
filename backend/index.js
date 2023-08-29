@@ -18,11 +18,8 @@ app.use(express.json())
 app.use('/api/users', userRoutes)
 
 // make api request to '/' every 5 minutes to keep this app awake
-schedule.scheduleJob('* * * * *', function(){
+schedule.scheduleJob('*/14 * * * *', function(){
   const request = axios.get('https://nourishnet-backend-k736.onrender.com')
-  request.then((response) => {
-    console.log('server is awake')
-  })
 })
 app.get("/", (req, res)=> {
   res.send('API is running...')
