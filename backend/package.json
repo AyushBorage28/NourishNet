@@ -22,6 +22,7 @@
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.3",
     "node-geolocation": "^1.15.14",
+    "node-schedule": "^2.1.1",
     "passport": "^0.6.0",
     "passport-google-oidc": "^0.1.0"
   }
